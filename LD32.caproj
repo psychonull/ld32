@@ -77,15 +77,11 @@
         <object-type name="Text" sid="2985603725420557">
             <plugin id="Text" />
         </object-type>
-        <object-type name="SpriteFont" sid="8243520218007692">
+        <object-type name="Menu_title" sid="8243520218007692">
             <plugin id="Spritefont2" />
             <texture />
         </object-type>
-        <object-type name="SpriteFont2" sid="8138886017681374">
-            <plugin id="Spritefont2" />
-            <texture />
-        </object-type>
-        <object-type name="SpriteFont3" sid="8361429101563902">
+        <object-type name="Menu_hint" sid="8361429101563902">
             <plugin id="Spritefont2" />
             <instance-variables>
                 <instance-variable name="isWhite" sid="8826608002468624" type="boolean" />
@@ -103,10 +99,12 @@
     <layout-folder>
         <layout>Layout 1.xml</layout>
         <layout>Menu.xml</layout>
+        <layout>Minigame_1.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Event sheet Menu.xml</event-sheet>
+        <event-sheet>Minigame_1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
