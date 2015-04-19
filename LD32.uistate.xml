@@ -11,8 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Pig</layout>
-        <layout active="1" order="1">MoneyAttack</layout>
-        <event-sheet order="2">MoneyAttackSheet</event-sheet>
+        <layout order="2">Car</layout>
+        <event-sheet active="1" order="1">PigEventSheet</event-sheet>
+        <event-sheet order="3">CarEventSheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -63,5 +64,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/money_buildings/" />
         <folder expanded="1" path="animation-folder/money_buildings2/" />
         <folder expanded="1" path="animation-folder/money_buildings3/" />
+        <folder expanded="1" path="animation-folder/pig_bg_color/" />
     </folders-expanded>
 </c2uistate>

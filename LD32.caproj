@@ -91,6 +91,11 @@
                 <instance-variable name="IsBlocking" sid="7965141881492848" type="boolean" />
                 <instance-variable name="IsAngry" sid="7693806030031473" type="boolean" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="7252689040235971">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1944863421714708" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -752,6 +757,21 @@
                             <point x="0.211538" y="0.492958" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PigBlood" sid="3146211545001393">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="pig_bg_color" sid="2357860344507294">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2924959941151485" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
