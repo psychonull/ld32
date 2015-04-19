@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CarEventSheet</name>
+    <events>
+        <variable constant="1" name="BREAK2" sid="6100658541322591" static="0" type="number">10</variable>
+        <variable constant="0" name="CarHit" sid="9750046872662338" static="0" type="number">0</variable>
+        <variable constant="1" name="CARPARTS" sid="5768347491452562" static="0" type="number">6</variable>
+        <variable constant="0" name="TotalDamage" sid="72451813789675" static="0" type="number">0</variable>
+        <variable constant="1" name="BREAK1" sid="1831164519533623" static="0" type="number">5</variable>
+        <event-block sid="9282617669379316">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="671840343470268" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">car_part0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="6998615978402113" type="car_part0">
+                    <param id="0" name="Instance variable">damage</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="3614695697378639" type="System">
+                    <param id="0" name="Variable">CarHit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3663352761950218">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="3818996844878299" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">car_part1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="1996302329865303" type="car_part1">
+                    <param id="0" name="Instance variable">damage</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="7000424286904398" type="System">
+                    <param id="0" name="Variable">CarHit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9597068725146501">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="2195697185099496" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">car_part2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="4574705294069039" type="car_part2">
+                    <param id="0" name="Instance variable">damage</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="1567377574182587" type="System">
+                    <param id="0" name="Variable">CarHit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6650624437566182">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="8425960861226353" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">car_part3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="8771926906830086" type="car_part3">
+                    <param id="0" name="Instance variable">damage</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="6794451738830019" type="System">
+                    <param id="0" name="Variable">CarHit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7669752575573205">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="3232713927912508" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">car_part4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="3046209251991578" type="car_part4">
+                    <param id="0" name="Instance variable">damage</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="3803037228396165" type="System">
+                    <param id="0" name="Variable">CarHit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1890701879574673">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7608871107588077" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">car_part5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="3462242967112307" type="car_part5">
+                    <param id="0" name="Instance variable">damage</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="1097713799614682" type="System">
+                    <param id="0" name="Variable">CarHit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9885163126545237">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="1414897840976204" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9343093436915026" type="System">
+                    <param id="0" name="Variable">TotalDamage</param>
+                    <param id="1" name="Value">car_part0.damage + car_part1.damage + car_part2.damage + car_part3.damage + car_part4.damage + car_part5.damage</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9137428191369655">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9939326382179901" type="car_part0">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">BREAK1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="823910432945434" type="car_part0">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1999232089206283">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9784122216279889" type="car_part1">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">BREAK1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="1954746858579644" type="car_part1">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="387960200777792">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8468536038914739" type="car_part2">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">BREAK1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="2697104169010874" type="car_part2">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5050302907050148">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1122661734856218" type="car_part3">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">BREAK1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="4346220112052808" type="car_part3">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1813652650554627">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8310702824857093" type="car_part4">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">BREAK1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="9818901442502505" type="car_part4">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2464071481630604">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2556478837985537" type="car_part5">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">BREAK1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="2814331459675085" type="car_part5">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1169459429941377">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5549812237454244" type="car_part0">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">BREAK2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="7025757907240706" type="car_part0">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="482329670885371" type="car_part0">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Value">BREAK2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5616942350231861">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4117793591339721" type="car_part1">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">BREAK2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="4839650437740357" type="car_part1">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4785895718664121" type="car_part1">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Value">BREAK2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8457819074927021">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2665423801497858" type="car_part2">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">BREAK2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="4628597333684911" type="car_part2">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4004135810862697" type="car_part2">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Value">BREAK2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2944842862247689">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2374359853039466" type="car_part3">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">BREAK2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="7355334754256611" type="car_part3">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4455011969944169" type="car_part3">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Value">BREAK2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8861313253608595">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3786619737269424" type="car_part4">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">BREAK2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="4115327817865581" type="car_part4">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4979082234384511" type="car_part4">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Value">BREAK2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6380783671147108">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2862943938123406" type="car_part5">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">BREAK2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="6218489419640339" type="car_part5">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3288926973411106" type="car_part5">
+                            <param id="0" name="Instance variable">damage</param>
+                            <param id="1" name="Value">BREAK2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3668337103336381">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8804217882242877" type="System">
+                            <param id="0" name="Variable">TotalDamage</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">BREAK2*CARPARTS</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="271410848110516" type="Health">
+                            <param id="0" name="Width">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7396535695682212">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8873479537805054" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="8574546790470694" type="Health">
+                            <param id="0" name="Width">(TotalDamage * 100) / (BREAK2*CARPARTS)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="326943722357525">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7009242949024412" type="System">
+                            <param id="0" name="Variable">CarHit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="1146188047558334" type="System">
+                            <param id="0" name="Object to create">PartsPar0</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">Mouse.X</param>
+                            <param id="3" name="Y">Mouse.Y</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4650559452860751" type="System">
+                            <param id="0" name="Variable">CarHit</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="3425363388579707" type="car_bg2">
+                            <param id="0" name="Magnitude">5</param>
+                            <param id="1" name="Duration">0.2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3958802600523021">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="3907209219955925" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="6868265476523924" type="Hand">
+                    <param id="0" name="Instance variable">Active</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="210748942845862" type="Hand">
+                    <param id="0" name="X">Mouse.X+80</param>
+                    <param id="1" name="Y">Mouse.Y+60</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7029941061533717">
+            <conditions>
+                <condition id="-22" name="Else" sid="9603603384292701" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="4668065110157812" type="Hand">
+                    <param id="0" name="Instance variable">Active</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="394991318715449" type="Hand">
+                    <param id="0" name="X">Mouse.X+100</param>
+                    <param id="1" name="Y">Mouse.Y+60</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
