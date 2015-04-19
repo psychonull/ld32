@@ -41,7 +41,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Menu</first-layout>
+    <first-layout>Pig</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -795,6 +795,10 @@
             <plugin id="Spritefont2" />
             <texture />
         </object-type>
+        <object-type name="CarRetry" sid="5411600937159099">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -811,7 +815,6 @@
         <event-sheet>Event sheet Menu.xml</event-sheet>
         <event-sheet>Minigame_1.xml</event-sheet>
         <event-sheet>MoneyAttackSheet.xml</event-sheet>
-        <event-sheet>CarEventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="47" />
