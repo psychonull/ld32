@@ -779,6 +779,9 @@
         <object-type name="MoneyQty2" sid="9681929385592554">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Text2" sid="4736700598766692">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
