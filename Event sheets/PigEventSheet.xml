@@ -391,7 +391,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="7208169272623191" type="Pig">
                                     <param id="0" name="Instance variable">Anger</param>
-                                    <param id="1" name="Value">random(ANGERLIMIT+25,ANGERELECTRIC+30)</param>
+                                    <param id="1" name="Value">random(ANGERLIMIT+20,ANGERELECTRIC+25)</param>
                                 </action>
                             </actions>
                         </event-block>

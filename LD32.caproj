@@ -775,6 +775,26 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Bar_BG" sid="395616022545063">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9746591797063511" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.533333" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Menu_title2" sid="4958624313074041">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="CarTimer" sid="1026128473961708">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="CarMsg" sid="1803682179474674">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

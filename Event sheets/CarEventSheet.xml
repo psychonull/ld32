@@ -3,11 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>CarEventSheet</name>
     <events>
-        <variable constant="1" name="BREAK2" sid="6100658541322591" static="0" type="number">10</variable>
+        <variable constant="1" name="BREAK2" sid="6100658541322591" static="0" type="number">20</variable>
         <variable constant="0" name="CarHit" sid="9750046872662338" static="0" type="number">0</variable>
+        <variable constant="0" name="END" sid="3303354348414315" static="0" type="number">0</variable>
         <variable constant="1" name="CARPARTS" sid="5768347491452562" static="0" type="number">6</variable>
         <variable constant="0" name="TotalDamage" sid="72451813789675" static="0" type="number">0</variable>
-        <variable constant="1" name="BREAK1" sid="1831164519533623" static="0" type="number">5</variable>
+        <variable constant="0" name="TimeBreak" sid="7191605657007" static="0" type="number">20</variable>
+        <variable constant="1" name="BREAK1" sid="1831164519533623" static="0" type="number">10</variable>
         <event-block sid="9282617669379316">
             <conditions>
                 <condition id="6" name="On object clicked" sid="671840343470268" type="Mouse">
@@ -130,6 +132,9 @@
                 <action id="-9" name="Set value" sid="9343093436915026" type="System">
                     <param id="0" name="Variable">TotalDamage</param>
                     <param id="1" name="Value">car_part0.damage + car_part1.damage + car_part2.damage + car_part3.damage + car_part4.damage + car_part5.damage</param>
+                </action>
+                <action id="0" name="Set text" sid="4536863277991148" type="CarTimer">
+                    <param id="0" name="Text">TimeBreak</param>
                 </action>
             </actions>
             <sub-events>
@@ -408,6 +413,94 @@
                     <param id="1" name="Y">Mouse.Y+60</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="5918725826663561">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="530670722207398" type="Hand">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">110</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="1262610105439685" type="Hand">
+                    <param id="0" name="X">Hand.X</param>
+                    <param id="1" name="Y">110</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2430640897814861">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="6794747003654716" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9853918655739958" type="System">
+                    <param id="0" name="Variable">END</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="245317053470281" type="System">
+                    <param id="0" name="Variable">TimeBreak</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="8604798548573406" type="CarTimer">
+                    <param id="0" name="Text">TimeBreak</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8300916310382295">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6465683765009778" type="System">
+                            <param id="0" name="Variable">TimeBreak</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4801963927768091" type="System">
+                            <param id="0" name="Variable">TimeBreak</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6877236363370972">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3994832184123036" type="System">
+                            <param id="0" name="Variable">TotalDamage</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">BREAK2*CARPARTS-2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8979870067544225" type="CarMsg">
+                            <param id="0" name="Text">&quot;CAR WRECKED!&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="632815120149932" type="System">
+                            <param id="0" name="Variable">END</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9677955197205832">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9989976596425451" type="System">
+                            <param id="0" name="Variable">TimeBreak</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8193481338582414" type="CarMsg">
+                            <param id="0" name="Text">&quot;TOO SLOW!&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8051400079681569" type="System">
+                            <param id="0" name="Variable">END</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
