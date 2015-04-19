@@ -23,6 +23,7 @@
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
     </used-behaviors>
     <used-effects>
@@ -231,18 +232,112 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Bomber" sid="7216552007418717">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2572510506537399" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Marcelo\Downloads\doodle.png">
+                        <collision-poly>
+                            <point x="0.346" y="0.576667" />
+                            <point x="0.5" y="0.373333" />
+                            <point x="0.674" y="0.543333" />
+                            <point x="0.628" y="0.5" />
+                            <point x="0.6" y="0.333333" />
+                            <point x="0.5" y="0.413333" />
+                            <point x="0.41" y="0.316667" />
+                            <point x="0.404" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Money" sid="6003940665939294">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="5635142996489604">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5549096741000968" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\Mone.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Montain" sid="9303932662743978">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="2096948015070651">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3264465637132411" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\Montain.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="City" sid="4821628377960692">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="1071213920952572">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7287638784577249" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\City.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MoneyQty" sid="8920021438216711">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="LeftWind" sid="5646047556851069">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6058337256351074" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\Wind.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WindSeparator" sid="7277265939369432">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2334539781390327" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\WindSeparator.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RightWind" sid="7240381392885193">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7114797458356576" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\Wind.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Minutes" sid="539812619277676">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Seconds" sid="42227045079416">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Pig.xml</layout>
         <layout>Menu.xml</layout>
         <layout>Minigame_1.xml</layout>
+        <layout>MoneyAttack.xml</layout>
+        <layout>Unused.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>PigEventSheet.xml</event-sheet>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Event sheet Menu.xml</event-sheet>
         <event-sheet>Minigame_1.xml</event-sheet>
+        <event-sheet>MoneyAttackSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="6" />

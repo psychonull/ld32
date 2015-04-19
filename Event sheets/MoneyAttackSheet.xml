@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MoneyAttackSheet</name>
+    <events>
+        <variable constant="0" name="seconds" sid="2789880607422253" static="0" type="number">0</variable>
+        <variable constant="0" name="minutes" sid="5715448478631182" static="0" type="number">0</variable>
+        <variable constant="0" name="moneyQuantity" sid="740316696200057" static="0" type="number">1000</variable>
+        <variable constant="0" name="elementType" sid="899803460203676" static="0" type="number">0</variable>
+        <variable constant="0" name="wind" sid="4664775453145421" static="0" type="number">5</variable>
+        <event-block sid="1273697583964644">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="9298298503668738" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Espaciadora)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="317093981124451" type="System">
+                    <param id="0" name="Object to create">Money</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">Bomber.X</param>
+                    <param id="3" name="Y">Bomber.Y</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="1040278480785275" type="Money">
+                    <param id="0" name="Speed">4 * -wind</param>
+                </action>
+                <action id="-9" name="Set value" sid="128321627647196" type="System">
+                    <param id="0" name="Variable">moneyQuantity</param>
+                    <param id="1" name="Value">moneyQuantity - 1</param>
+                </action>
+                <action id="0" name="Set text" sid="3449202461715243" type="MoneyQty">
+                    <param id="0" name="Text">moneyQuantity</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4143502435033681">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="6048568464849608" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2747559249170604" type="System">
+                    <param id="0" name="Variable">wind</param>
+                    <param id="1" name="Value">random(-20, 20)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3935712021937792">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="778645922059325" type="System">
+                            <param id="0" name="Value">wind</param>
+                            <param id="1" name="Lower bound">-20</param>
+                            <param id="2" name="Upper bound">-0.9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="7150760936325004" type="RightWind">
+                            <param id="0" name="Width">(wind / -20) * 50</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="6507329960068951" type="LeftWind">
+                            <param id="0" name="Width">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1767293951297093">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7684201941012488" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="1767011176835131" type="LeftWind">
+                            <param id="0" name="Width">(wind /20) * 50</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="8317959770640297" type="RightWind">
+                            <param id="0" name="Width">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8326222704354695">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="4792275018812311" type="System">
+                    <param id="0" name="Interval (seconds)">random(4, 10)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8244270766800036">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9193807100509192" type="System">
+                            <param id="0" name="First value">elementType</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="4338763776298195" type="System">
+                            <param id="0" name="Object to create">Montain</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">350</param>
+                            <param id="3" name="Y">165</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9877921404568544">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1479189827903697" type="System">
+                            <param id="0" name="First value">elementType</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="8316981654054175" type="System">
+                            <param id="0" name="Object to create">City</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">350</param>
+                            <param id="3" name="Y">175</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2171296809110456">
+            <conditions>
+                <condition id="2" name="Key is down" sid="6732317755498708" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="8967326424664861" type="Bomber">
+                    <param id="0" name="X">Bomber.X +1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3339890591828554">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3880741860729147" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="3489617939475597" type="Bomber">
+                    <param id="0" name="X">Bomber.X - 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6815259803725999">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="3310244527050987" type="System">
+                    <param id="0" name="Interval (seconds)">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9399548884445473" type="System">
+                    <param id="0" name="Variable">elementType</param>
+                    <param id="1" name="Value">random(0, 6)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6954906289524426">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1497332909281637" type="City">
+                    <param id="0" name="Object">Money</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1718167363728614" type="System">
+                    <param id="0" name="Variable">moneyQuantity</param>
+                    <param id="1" name="Value">moneyQuantity + 1</param>
+                </action>
+                <action id="0" name="Set text" sid="2586781126799544" type="MoneyQty">
+                    <param id="0" name="Text">moneyQuantity</param>
+                </action>
+                <action id="-9" name="Destroy" sid="202108475155038" type="Money" />
+            </actions>
+        </event-block>
+        <event-block sid="3603312624434214">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3769041230682941" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9832690101008299">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="2227862257963028" type="System">
+                            <param id="0" name="Value">wind</param>
+                            <param id="1" name="Lower bound">-20</param>
+                            <param id="2" name="Upper bound">-0.9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="1404565991753725" type="LeftWind">
+                            <param id="0" name="Width">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8102503750967165">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="2106432901030118" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="556170887751514" type="System">
+                    <param id="0" name="Variable">seconds</param>
+                    <param id="1" name="Value">seconds + 1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3013348914637537">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="2740992503897821" type="System">
+                            <param id="0" name="First value">seconds</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">59</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5442941655310731" type="System">
+                            <param id="0" name="Variable">seconds</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9701508787309601" type="Seconds">
+                            <param id="0" name="Text">seconds</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7679276174722427" type="System">
+                            <param id="0" name="Variable">minutes</param>
+                            <param id="1" name="Value">minutes + 1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="752868988212221" type="Minutes">
+                            <param id="0" name="Text">minutes</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7406188605322508">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3775822616532906" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="157915602762413" type="Minutes">
+                            <param id="0" name="Text">minutes</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6636308180755705" type="Seconds">
+                            <param id="0" name="Text">seconds</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
