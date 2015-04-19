@@ -14,6 +14,7 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -25,6 +26,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="inverse">Inverse</effect>
@@ -91,16 +93,58 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1944863421714708" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.223077" y="0.29" />
+                            <point x="0.5" y="0.15" />
+                            <point x="0.823077" y="0.23" />
+                            <point x="0.930769" y="0.5" />
+                            <point x="0.838462" y="0.885" />
+                            <point x="0.517308" y="0.85" />
+                            <point x="0.282692" y="0.89" />
+                            <point x="0.169231" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Hurt" pingpong="0" repeatcount="1" repeatto="0" sid="9830672703739405" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.203846" y="0.225" />
+                            <point x="0.5" y="0.16" />
+                            <point x="0.807692" y="0.25" />
+                            <point x="0.915385" y="0.5" />
+                            <point x="0.811538" y="0.8875" />
+                            <point x="0.55" y="0.7925" />
+                            <point x="0.253846" y="0.8475" />
+                            <point x="0.169231" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="1" name="Angry" pingpong="0" repeatcount="1" repeatto="0" sid="4961327354115573" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.257692" y="0.2075" />
+                            <point x="0.5" y="0.17" />
+                            <point x="0.876923" y="0.16" />
+                            <point x="0.938462" y="0.5" />
+                            <point x="0.855769" y="0.91" />
+                            <point x="0.480769" y="0.905" />
+                            <point x="0.311539" y="0.905" />
+                            <point x="0.184615" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="2" loop="1" name="Electric" pingpong="0" repeatcount="1" repeatto="0" sid="996561030199435" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.1" y="0.08" />
+                            <point x="0.544231" y="0.0325" />
+                            <point x="0.898077" y="0.15" />
+                            <point x="0.842308" y="0.9625" />
+                            <point x="0.505769" y="0.8975" />
+                            <point x="0.121154" y="0.9475" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -150,12 +194,6 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="D_PigAnger" sid="2297305396091346">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="D_Life" sid="8537180218144751">
-            <plugin id="Text" />
         </object-type>
         <object-type name="Hand" sid="3141804560210983">
             <plugin id="Sprite" />
@@ -251,6 +289,24 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="car_bg" sid="1336652978233657">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9957474607561892" speed="5">
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_bg.png">
+                        <collision-poly>
+                            <point x="0.101449" y="0.190909" />
+                            <point x="0.497585" y="0.0363636" />
+                            <point x="0.995169" y="0.5" />
+                            <point x="0.903382" y="0.818182" />
+                            <point x="0.497585" y="0.827273" />
+                            <point x="0.178744" y="0.663636" />
+                            <point x="0.0628019" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="Money" sid="6003940665939294">
             <plugin id="Sprite" />
             <behaviors>
@@ -323,6 +379,238 @@
         <object-type name="Seconds" sid="42227045079416">
             <plugin id="Text" />
         </object-type>
+        <object-type name="car_part0" sid="2661133978020284">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="damage" sid="1860077184260719" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5604637910742674" speed="0">
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part00.png">
+                        <collision-poly>
+                            <point x="0.201691" y="0.0545455" />
+                            <point x="0.248792" y="0.0659091" />
+                            <point x="0.125604" y="0.293182" />
+                            <point x="0.0555555" y="0.243182" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part01.png">
+                        <collision-poly>
+                            <point x="0.202899" y="0.0545455" />
+                            <point x="0.252415" y="0.0522727" />
+                            <point x="0.14372" y="0.268182" />
+                            <point x="0.0531401" y="0.247727" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part02.png">
+                        <collision-poly>
+                            <point x="0.204106" y="0.0545455" />
+                            <point x="0.25" y="0.0568182" />
+                            <point x="0.14372" y="0.263636" />
+                            <point x="0.0495169" y="0.245455" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="car_part1" sid="9077089792189519">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="damage" sid="4248225076530038" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="41475792550577" speed="0">
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part10.png">
+                        <collision-poly>
+                            <point x="0.323671" y="0.00454545" />
+                            <point x="0.721014" y="0.190909" />
+                            <point x="0.605072" y="0.429545" />
+                            <point x="0.184783" y="0.15" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part11.png">
+                        <collision-poly>
+                            <point x="0.323671" y="0.00454545" />
+                            <point x="0.721014" y="0.190909" />
+                            <point x="0.605072" y="0.429545" />
+                            <point x="0.184783" y="0.15" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part12.png">
+                        <collision-poly>
+                            <point x="0.323671" y="0.00454545" />
+                            <point x="0.721014" y="0.190909" />
+                            <point x="0.605072" y="0.429545" />
+                            <point x="0.184783" y="0.15" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="car_part2" sid="3627971813670631">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="damage" sid="690005691342422" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6233062366453442" speed="0">
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part20.png">
+                        <collision-poly>
+                            <point x="0.00966183" y="0.220455" />
+                            <point x="0.323671" y="0.225" />
+                            <point x="0.326087" y="0.686364" />
+                            <point x="0.00483093" y="0.427273" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part21.png">
+                        <collision-poly>
+                            <point x="0.00966183" y="0.220455" />
+                            <point x="0.323671" y="0.225" />
+                            <point x="0.326087" y="0.686364" />
+                            <point x="0.00483093" y="0.427273" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part22.png">
+                        <collision-poly>
+                            <point x="0.00966183" y="0.220455" />
+                            <point x="0.323671" y="0.225" />
+                            <point x="0.326087" y="0.686364" />
+                            <point x="0.00483093" y="0.427273" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="car_part3" sid="8436010720787719">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="damage" sid="9207732850086223" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6982240368942201" speed="0">
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part30.png">
+                        <collision-poly>
+                            <point x="0.335749" y="0.695454" />
+                            <point x="0.508454" y="0.804546" />
+                            <point x="0.506039" y="0.520455" />
+                            <point x="0.472222" y="0.329546" />
+                            <point x="0.351449" y="0.236364" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part31.png">
+                        <collision-poly>
+                            <point x="0.335749" y="0.695454" />
+                            <point x="0.508454" y="0.804546" />
+                            <point x="0.506039" y="0.520455" />
+                            <point x="0.472222" y="0.329546" />
+                            <point x="0.351449" y="0.236364" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part32.png">
+                        <collision-poly>
+                            <point x="0.335749" y="0.695454" />
+                            <point x="0.508454" y="0.804546" />
+                            <point x="0.506039" y="0.520455" />
+                            <point x="0.472222" y="0.329546" />
+                            <point x="0.351449" y="0.236364" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="car_part4" sid="1398898901282008">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="damage" sid="1166095939364968" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8127842955955353" speed="0">
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part40.png">
+                        <collision-poly>
+                            <point x="0.530193" y="0.513636" />
+                            <point x="0.961352" y="0.736363" />
+                            <point x="0.816425" y="0.943182" />
+                            <point x="0.512077" y="0.825" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part41.png">
+                        <collision-poly>
+                            <point x="0.530193" y="0.513636" />
+                            <point x="0.961352" y="0.736363" />
+                            <point x="0.816425" y="0.943182" />
+                            <point x="0.512077" y="0.825" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part42.png">
+                        <collision-poly>
+                            <point x="0.530193" y="0.513636" />
+                            <point x="0.961352" y="0.736363" />
+                            <point x="0.816425" y="0.943182" />
+                            <point x="0.512077" y="0.825" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="car_part5" sid="7216477796399682">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="damage" sid="8500731705578211" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2729982063213907" speed="0">
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part50.png">
+                        <collision-poly>
+                            <point x="0.710145" y="0.286364" />
+                            <point x="0.992754" y="0.477273" />
+                            <point x="0.864734" y="0.745455" />
+                            <point x="0.623188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part51.png">
+                        <collision-poly>
+                            <point x="0.710145" y="0.286364" />
+                            <point x="0.992754" y="0.477273" />
+                            <point x="0.864734" y="0.745455" />
+                            <point x="0.623188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_part52.png">
+                        <collision-poly>
+                            <point x="0.710145" y="0.286364" />
+                            <point x="0.992754" y="0.477273" />
+                            <point x="0.864734" y="0.745455" />
+                            <point x="0.623188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="car_bg2" sid="9611860631324949">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="5842068577686822">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7743398537295496" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\car_bg0.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PartsPar0" sid="3865886773551167">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="BackgroundBlack" sid="5221348216329961">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5671333623729887" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -331,6 +619,7 @@
         <layout>Minigame_1.xml</layout>
         <layout>MoneyAttack.xml</layout>
         <layout>Unused.xml</layout>
+        <layout>Car.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>PigEventSheet.xml</event-sheet>
@@ -338,6 +627,7 @@
         <event-sheet>Event sheet Menu.xml</event-sheet>
         <event-sheet>Minigame_1.xml</event-sheet>
         <event-sheet>MoneyAttackSheet.xml</event-sheet>
+        <event-sheet>CarEventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="6" />
