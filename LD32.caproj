@@ -782,6 +782,9 @@
         <object-type name="Text2" sid="4736700598766692">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Text3" sid="5076366864446358">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

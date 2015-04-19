@@ -206,7 +206,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>287</x>
-                        <y>21</y>
+                        <y>22</y>
                         <z>0</z>
                         <width>29</width>
                         <height>12</height>
@@ -236,7 +236,34 @@
                         <y>1</y>
                         <z>0</z>
                         <width>120</width>
-                        <height>30</height>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text3" uid="60">
+                    <properties>
+                        <text>Delivered Money</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-11,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>200</x>
+                        <y>22</y>
+                        <z>0</z>
+                        <width>102</width>
+                        <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -358,7 +385,7 @@
                 </instance>
                 <instance type="MoneyQty" uid="36">
                     <properties>
-                        <text>1000</text>
+                        <text>100</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-13,400,0</font>
                         <color>0,0,0</color>
@@ -372,7 +399,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>287</x>
-                        <y>3</y>
+                        <y>1</y>
                         <z>0</z>
                         <width>29</width>
                         <height>12</height>

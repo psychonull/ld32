@@ -9,7 +9,7 @@
         <variable constant="0" name="buildingType" sid="8382808710571439" static="0" type="number">0</variable>
         <variable constant="0" name="seconds" sid="2789880607422253" static="0" type="number">0</variable>
         <variable constant="0" name="minutes" sid="5715448478631182" static="0" type="number">0</variable>
-        <variable constant="0" name="moneyQuantity" sid="740316696200057" static="0" type="number">1000</variable>
+        <variable constant="0" name="moneyQuantity" sid="740316696200057" static="0" type="number">100</variable>
         <variable constant="0" name="elementType" sid="899803460203676" static="0" type="number">0</variable>
         <variable constant="0" name="wind" sid="4664775453145421" static="0" type="number">0</variable>
         <event-block sid="1273697583964644">
@@ -494,6 +494,24 @@
                             <param id="0" name="Width">0</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8003550255096825">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="9313003802778544" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8456873232918319">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9390222210623767" type="System">
+                            <param id="0" name="First value">moneyQuantity</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-block>
