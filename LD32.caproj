@@ -14,6 +14,7 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
@@ -73,13 +74,74 @@
         <object-type name="Text" sid="2985603725420557">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Pig" sid="1590700420757518">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Anger" sid="8904351599632911" type="number" />
+                <instance-variable name="IsBlocking" sid="7965141881492848" type="boolean" />
+                <instance-variable name="IsAngry" sid="7693806030031473" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1944863421714708" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Hurt" pingpong="0" repeatcount="1" repeatto="0" sid="9830672703739405" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="1" name="Angry" pingpong="0" repeatcount="1" repeatto="0" sid="4961327354115573" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="1" name="Electric" pingpong="0" repeatcount="1" repeatto="0" sid="996561030199435" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="D_PigAnger" sid="2297305396091346">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="D_Life" sid="8537180218144751">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Hand" sid="3141804560210983">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Active" sid="1320875509612296" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6278873470307203" speed="5">
+                    <frame duration="1" hotspotX="0.502439" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\hand.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pigeye" sid="3526419271427098">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5493544659088078" speed="5">
+                    <frame duration="1" hotspotX="0.25" hotspotY="0.7" original-source="C:\Users\pjnov_000\Desktop\pigeye.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.3" />
+                            <point x="0.5" y="0.2" />
+                            <point x="0.75" y="0.3" />
+                            <point x="0.833333" y="0.5" />
+                            <point x="0.75" y="0.7" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.25" y="0.7" />
+                            <point x="0.166667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Layout 1.xml</layout>
+        <layout>Pig.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>PigEventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
