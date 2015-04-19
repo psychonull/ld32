@@ -12,6 +12,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">Pig</layout>
         <layout active="1" order="1">MoneyAttack</layout>
+        <layout order="3">Unused</layout>
+        <layout order="4">Car</layout>
         <event-sheet order="2">MoneyAttackSheet</event-sheet>
     </open-tabs>
     <properties>

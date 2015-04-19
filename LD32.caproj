@@ -342,7 +342,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6058337256351074" speed="5">
-                    <frame duration="1" hotspotX="1" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\Wind.png" />
+                    <frame duration="1" hotspotX="1" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\City.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -358,7 +358,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7114797458356576" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\Wind.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\City.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -629,6 +629,11 @@
         </object-type>
         <object-type name="cloud1" sid="8452029507107524">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="3484814443449078">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9307736008177029" speed="5">
                     <frame duration="1" hotspotX="0.507937" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\cloud1.png">
@@ -660,6 +665,11 @@
         </object-type>
         <object-type name="cloud2" sid="3565067603267995">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="2015457313252137">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9862565345327517" speed="5">
                     <frame duration="1" hotspotX="0.507937" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\cloud2.png">
@@ -679,20 +689,14 @@
         </object-type>
         <object-type name="money_buildings" sid="4473547824612788">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="5200749795565801">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4984403840671644" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\pjnov_000\Desktop\money_buildings1.png">
-                        <collision-poly>
-                            <point x="0.5" y="0.366197" />
-                            <point x="0.5" y="0.366197" />
-                            <point x="0.865385" y="0.492958" />
-                            <point x="0.884615" y="0.915493" />
-                            <point x="0.5" y="1" />
-                            <point x="0.0961538" y="0.929577" />
-                            <point x="0.115385" y="0.492958" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\pjnov_000\Desktop\money_buildings2.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\money_buildings2.png">
                         <collision-poly>
                             <point x="0.307692" y="0.225352" />
                             <point x="0.5" y="0.169014" />
@@ -704,7 +708,18 @@
                             <point x="0.0961538" y="0.492958" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\pjnov_000\Desktop\money_buildings3.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\money_buildings1.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.366197" />
+                            <point x="0.5" y="0.366197" />
+                            <point x="0.865385" y="0.492958" />
+                            <point x="0.884615" y="0.915493" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0961538" y="0.929577" />
+                            <point x="0.115385" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.62" original-source="C:\Users\pjnov_000\Desktop\money_buildings3.png">
                         <collision-poly>
                             <point x="0.384615" y="0.28169" />
                             <point x="0.653846" y="0.253521" />
@@ -755,6 +770,15 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="test" sid="9579747524496255">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="test2" sid="2621878222218663">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="MoneyQty2" sid="9681929385592554">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -771,7 +795,6 @@
         <event-sheet>Event sheet Menu.xml</event-sheet>
         <event-sheet>Minigame_1.xml</event-sheet>
         <event-sheet>MoneyAttackSheet.xml</event-sheet>
-        <event-sheet>CarEventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="47" />

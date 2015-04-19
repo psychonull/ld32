@@ -3,11 +3,15 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MoneyAttackSheet</name>
     <events>
+        <variable constant="0" name="correctShoots" sid="2846784496993824" static="0" type="number">0</variable>
+        <variable constant="0" name="newWind" sid="5650058036309211" static="0" type="number">0</variable>
+        <variable constant="0" name="buildingSpeed" sid="6298201871619866" static="0" type="number">30</variable>
+        <variable constant="0" name="buildingType" sid="8382808710571439" static="0" type="number">0</variable>
         <variable constant="0" name="seconds" sid="2789880607422253" static="0" type="number">0</variable>
         <variable constant="0" name="minutes" sid="5715448478631182" static="0" type="number">0</variable>
         <variable constant="0" name="moneyQuantity" sid="740316696200057" static="0" type="number">1000</variable>
         <variable constant="0" name="elementType" sid="899803460203676" static="0" type="number">0</variable>
-        <variable constant="0" name="wind" sid="4664775453145421" static="0" type="number">5</variable>
+        <variable constant="0" name="wind" sid="4664775453145421" static="0" type="number">0</variable>
         <event-block sid="1273697583964644">
             <conditions>
                 <condition id="0" name="On key pressed" sid="9298298503668738" type="Keyboard">
@@ -39,40 +43,20 @@
                     <param id="0" name="Interval (seconds)">5</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="2747559249170604" type="System">
-                    <param id="0" name="Variable">wind</param>
-                    <param id="1" name="Value">random(-20, 20)</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
-                <event-block sid="3935712021937792">
+                <event-block sid="1947850394140181">
                     <conditions>
-                        <condition id="-21" name="Is between values" sid="778645922059325" type="System">
-                            <param id="0" name="Value">wind</param>
-                            <param id="1" name="Lower bound">-20</param>
-                            <param id="2" name="Upper bound">-0.9</param>
+                        <condition id="-8" name="Compare two values" sid="2014734662073461" type="System">
+                            <param id="0" name="First value">round(wind)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">round(newWind)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-5" name="Set width" sid="7150760936325004" type="RightWind">
-                            <param id="0" name="Width">(wind / -20) * 50</param>
-                        </action>
-                        <action id="-5" name="Set width" sid="6507329960068951" type="LeftWind">
-                            <param id="0" name="Width">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1767293951297093">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="7684201941012488" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-5" name="Set width" sid="1767011176835131" type="LeftWind">
-                            <param id="0" name="Width">(wind /20) * 50</param>
-                        </action>
-                        <action id="-5" name="Set width" sid="8317959770640297" type="RightWind">
-                            <param id="0" name="Width">0</param>
+                        <action id="-9" name="Set value" sid="792730288804302" type="System">
+                            <param id="0" name="Variable">newWind</param>
+                            <param id="1" name="Value">round(random(-20, 20))</param>
                         </action>
                     </actions>
                 </event-block>
@@ -81,42 +65,80 @@
         <event-block sid="8326222704354695">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="4792275018812311" type="System">
-                    <param id="0" name="Interval (seconds)">random(4, 10)</param>
+                    <param id="0" name="Interval (seconds)">random(3, 6)</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="8244270766800036">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="9193807100509192" type="System">
-                            <param id="0" name="First value">elementType</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">2</param>
+                        <condition id="-21" name="Is between values" sid="9193807100509192" type="System">
+                            <param id="0" name="Value">elementType</param>
+                            <param id="1" name="Lower bound">0</param>
+                            <param id="2" name="Upper bound">0.9</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="4338763776298195" type="System">
-                            <param id="0" name="Object to create">Montain</param>
+                        <action id="-3" name="Create object" sid="499642298305573" type="System">
+                            <param id="0" name="Object to create">money_buildings</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="X">350</param>
-                            <param id="3" name="Y">165</param>
+                            <param id="3" name="Y">155</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="6119434350812323" type="money_buildings">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="2827185549294025" type="System">
+                            <param id="0" name="Object to create">cloud1</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">350</param>
+                            <param id="3" name="Y">75</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="9877921404568544">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="1479189827903697" type="System">
+                        <condition id="-21" name="Is between values" sid="1479189827903697" type="System">
+                            <param id="0" name="Value">elementType</param>
+                            <param id="1" name="Lower bound">1</param>
+                            <param id="2" name="Upper bound">1.9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="8316981654054175" type="System">
+                            <param id="0" name="Object to create">money_buildings</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">350</param>
+                            <param id="3" name="Y">155</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="4892188790519236" type="money_buildings">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4598374580712237">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1604600468497368" type="System">
                             <param id="0" name="First value">elementType</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="8316981654054175" type="System">
-                            <param id="0" name="Object to create">City</param>
+                        <action id="-3" name="Create object" sid="6664249535495146" type="System">
+                            <param id="0" name="Object to create">money_buildings</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="X">350</param>
-                            <param id="3" name="Y">175</param>
+                            <param id="3" name="Y">163</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="2867826517306926" type="money_buildings">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4037660875221534" type="System">
+                            <param id="0" name="Object to create">cloud2</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">350</param>
+                            <param id="3" name="Y">50</param>
                         </action>
                     </actions>
                 </event-block>
@@ -128,11 +150,23 @@
                     <param id="0" name="Key">39 (Right arrow)</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-1" name="Set X" sid="8967326424664861" type="Bomber">
-                    <param id="0" name="X">Bomber.X +1</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="5331976850023682">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9406483524082218" type="System">
+                            <param id="0" name="First value">Bomber.X</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">300</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="400866511579307" type="Bomber">
+                            <param id="0" name="X">Bomber.X +1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="3339890591828554">
             <conditions>
@@ -140,11 +174,23 @@
                     <param id="0" name="Key">37 (Left arrow)</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-1" name="Set X" sid="3489617939475597" type="Bomber">
-                    <param id="0" name="X">Bomber.X - 1</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="1526283810052916">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1544408402824597" type="System">
+                            <param id="0" name="First value">Bomber.X</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="4435170637114983" type="Bomber">
+                            <param id="0" name="X">Bomber.X - 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="6815259803725999">
             <conditions>
@@ -155,13 +201,13 @@
             <actions>
                 <action id="-9" name="Set value" sid="9399548884445473" type="System">
                     <param id="0" name="Variable">elementType</param>
-                    <param id="1" name="Value">random(0, 6)</param>
+                    <param id="1" name="Value">random(0, 4)</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="6954906289524426">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="1497332909281637" type="City">
+                <condition id="0" name="On collision with another object" sid="1497332909281637" type="money_buildings">
                     <param id="0" name="Object">Money</param>
                 </condition>
             </conditions>
@@ -174,29 +220,27 @@
                     <param id="0" name="Text">moneyQuantity</param>
                 </action>
                 <action id="-9" name="Destroy" sid="202108475155038" type="Money" />
+                <action id="-9" name="Set value" sid="8559865979306961" type="System">
+                    <param id="0" name="Variable">correctShoots</param>
+                    <param id="1" name="Value">correctShoots + 1</param>
+                </action>
+                <action id="0" name="Set text" sid="9499542132626364" type="MoneyQty2">
+                    <param id="0" name="Text">correctShoots</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3603312624434214">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="3769041230682941" type="System" />
             </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="9832690101008299">
-                    <conditions>
-                        <condition id="-21" name="Is between values" sid="2227862257963028" type="System">
-                            <param id="0" name="Value">wind</param>
-                            <param id="1" name="Lower bound">-20</param>
-                            <param id="2" name="Upper bound">-0.9</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-5" name="Set width" sid="1404565991753725" type="LeftWind">
-                            <param id="0" name="Width">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
+            <actions>
+                <action id="-5" name="Set width" sid="8031061376889639" type="LeftWind">
+                    <param id="0" name="Width">0</param>
+                </action>
+                <action id="-5" name="Set width" sid="9860240085787871" type="RightWind">
+                    <param id="0" name="Width">0</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="8102503750967165">
             <conditions>
@@ -225,27 +269,229 @@
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="0" name="Set text" sid="9701508787309601" type="Seconds">
-                            <param id="0" name="Text">seconds</param>
+                            <param id="0" name="Text">0 + seconds</param>
                         </action>
                         <action id="-9" name="Set value" sid="7679276174722427" type="System">
                             <param id="0" name="Variable">minutes</param>
                             <param id="1" name="Value">minutes + 1</param>
                         </action>
-                        <action id="0" name="Set text" sid="752868988212221" type="Minutes">
-                            <param id="0" name="Text">minutes</param>
+                        <action id="-9" name="Set value" sid="5428389192224716" type="System">
+                            <param id="0" name="Variable">buildingSpeed</param>
+                            <param id="1" name="Value">buildingSpeed + (minutes * 20)</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="9344098633616275">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3577852924037721" type="System">
+                                    <param id="0" name="First value">minutes</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="752868988212221" type="Minutes">
+                                    <param id="0" name="Text">&quot;0&quot; &amp; str(minutes) &amp; &quot; : &quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1440644482661559">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6988966459910804" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="4972249505060613" type="Minutes">
+                                    <param id="0" name="Text">minutes &amp; &quot; : &quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7406188605322508">
                     <conditions>
                         <condition id="-22" name="Else" sid="3775822616532906" type="System" />
                     </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7768532281517862">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9963548665336107" type="System">
+                                    <param id="0" name="First value">seconds</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="6636308180755705" type="Seconds">
+                                    <param id="0" name="Text">&quot;0&quot; &amp; seconds</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1121649321382569">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8534185943263693" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="9649769745877441" type="Seconds">
+                                    <param id="0" name="Text">seconds</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6571991020333279">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4742996137220583" type="System">
+                                    <param id="0" name="First value">minutes</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="5718478338976184" type="Minutes">
+                                    <param id="0" name="Text">&quot;0&quot; &amp; str(minutes) &amp; &quot; : &quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2814572999986968">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3182233110401193" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="2078846299765692" type="Minutes">
+                                    <param id="0" name="Text">minutes &amp; &quot; : &quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8421824496225683">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="2392352135059786" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="9367254920550971" type="money_buildings">
+                    <param id="0" name="Speed">buildingSpeed</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1195374802408447">
+            <conditions>
+                <condition id="2" name="Key is down" sid="5032153907368789" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7930153841565578">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1543634024205096" type="System">
+                            <param id="0" name="First value">Bomber.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">100</param>
+                        </condition>
+                    </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="157915602762413" type="Minutes">
-                            <param id="0" name="Text">minutes</param>
+                        <action id="-2" name="Set Y" sid="4519292324534753" type="Bomber">
+                            <param id="0" name="Y">Bomber.Y + 1</param>
                         </action>
-                        <action id="0" name="Set text" sid="6636308180755705" type="Seconds">
-                            <param id="0" name="Text">seconds</param>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6139932320385888">
+            <conditions>
+                <condition id="2" name="Key is down" sid="5079058513420656" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7350032614598338">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="7868140504340805" type="System">
+                            <param id="0" name="First value">Bomber.Y</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="8891693416182182" type="Bomber">
+                            <param id="0" name="Y">Bomber.Y -1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2203016663750917">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="526626160531869" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6786835573932823">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3056774860854263" type="System">
+                            <param id="0" name="First value">round(newWind)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">round(wind)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7168992424145599" type="System">
+                            <param id="0" name="Variable">wind</param>
+                            <param id="1" name="Value">wind - 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1155580479346299">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="4667992879381561" type="System">
+                            <param id="0" name="First value">round(newWind)</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">round(wind)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4506997205733758" type="System">
+                            <param id="0" name="Variable">wind</param>
+                            <param id="1" name="Value">wind +1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3958949777229592">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="7149922720643679" type="System">
+                            <param id="0" name="First value">wind</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="638538832462395" type="RightWind">
+                            <param id="0" name="Width">(wind / -20) * 50</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="3313624604731898" type="LeftWind">
+                            <param id="0" name="Width">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8177344887527968">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="7539392478804792" type="System">
+                            <param id="0" name="First value">wind</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="2225625182155885" type="LeftWind">
+                            <param id="0" name="Width">(wind /20) * 50</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="3868900102634012" type="RightWind">
+                            <param id="0" name="Width">0</param>
                         </action>
                     </actions>
                 </event-block>
