@@ -32,7 +32,7 @@
                     </conditions>
                     <actions>
                         <action id="-2" name="Set Y" sid="6554634952256202" type="1_sun">
-                            <param id="0" name="Y">1_sun.Y + random(5,8)</param>
+                            <param id="0" name="Y">1_sun.Y + random(12,18)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -54,6 +54,37 @@
                 </action>
                 <action behavior="CustomMovement" id="12" name="Set enabled" sid="976329423709712" type="1_enemy">
                     <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9048155040012983">
+            <conditions>
+                <condition id="0" name="On click" sid="3912389846526679" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="0" name="Apply force" sid="8573935412533452" type="1_ball">
+                    <param id="0" name="Force X">random(-2,2)</param>
+                    <param id="1" name="Force Y">random(-50,-100)</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4788894873575273">
+            <conditions>
+                <condition id="0" name="On click" sid="8982859928136357" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="1" name="Apply force towards position" sid="695655603250192" type="1_ball">
+                    <param id="0" name="Force">100</param>
+                    <param id="1" name="X">Mouse.X</param>
+                    <param id="2" name="Y">Mouse.Y</param>
+                    <param id="3" name="Image point">0</param>
                 </action>
             </actions>
         </event-block>
