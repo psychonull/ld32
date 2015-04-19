@@ -28,6 +28,65 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="Bg" sid="8310361886523261">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="pigbg" uid="32">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>159.598968506</x>
+                        <y>90.476516724</y>
+                        <z>0</z>
+                        <width>320</width>
+                        <height>180</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Objects" sid="5588252548331839">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
             <instances>
                 <instance type="Pig" uid="9">
                     <properties>
@@ -52,60 +111,6 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="D_PigAnger" uid="10">
-                    <properties>
-                        <text>Text</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>116.466308594</x>
-                        <y>11.131210327</y>
-                        <z>0</z>
-                        <width>200</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="D_Life" uid="11">
-                    <properties>
-                        <text>Text</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>112.874526978</x>
-                        <y>40.381462097</y>
-                        <z>0</z>
-                        <width>200</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -193,6 +198,50 @@
                         <height>158</height>
                         <depth>0</depth>
                         <hotspotX>0.502439022</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Health" uid="31">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>310.886657715</x>
+                        <y>10.193557739</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>8.302000046</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>0.495999992</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PigAngry" uid="33">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4.274902344</x>
+                        <y>10.193481445</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>7.276260376</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

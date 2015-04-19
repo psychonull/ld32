@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="1_bg" uid="11">
+                <instance type="1_bg" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -58,7 +58,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="1_sun" uid="12">
+                <instance type="1_sun" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -99,7 +99,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="1_SpawnPoint" uid="13">
+                <instance type="1_SpawnPoint" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -121,7 +121,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="1_SpawnPoint" uid="14">
+                <instance type="1_SpawnPoint" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

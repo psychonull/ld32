@@ -3,7 +3,11 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PigEventSheet</name>
     <events>
-        <variable constant="0" name="Life" sid="2179649592527005" static="0" type="number">20</variable>
+        <variable constant="1" name="ANGER_DEC" sid="1974581447451375" static="0" type="number">5</variable>
+        <variable constant="1" name="ANGER_INC" sid="9536188878721309" static="0" type="number">5</variable>
+        <variable constant="1" name="ANGERLIMIT" sid="807244845760363" static="0" type="number">30</variable>
+        <variable constant="1" name="ANGERELECTRIC" sid="1838908432889832" static="0" type="number">60</variable>
+        <variable constant="0" name="Life" sid="2179649592527005" static="0" type="number">100</variable>
         <event-block sid="3909707092149652">
             <conditions>
                 <condition id="6" name="On object clicked" sid="5361346346961241" type="Mouse">
@@ -23,7 +27,10 @@
                     <actions>
                         <action id="-11" name="Subtract from" sid="5922980955264256" type="System">
                             <param id="0" name="Variable">Life</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="6639596029116414" type="Health">
+                            <param id="0" name="Width">Life</param>
                         </action>
                     </actions>
                 </event-block>
@@ -34,7 +41,7 @@
                     <actions>
                         <action id="-11" name="Add to" sid="3105707018940012" type="Pig">
                             <param id="0" name="Instance variable">Anger</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">ANGER_INC</param>
                         </action>
                         <action id="4" name="Set animation" sid="1342300413915562" type="Pig">
                             <param id="0" name="Animation">&quot;Hurt&quot;</param>
@@ -49,7 +56,7 @@
                 <condition id="-7" name="Compare instance variable" sid="9183752833669815" type="Pig">
                     <param id="0" name="Instance variable">Anger</param>
                     <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">20</param>
+                    <param id="2" name="Value">ANGERELECTRIC</param>
                 </condition>
             </conditions>
             <actions>
@@ -72,7 +79,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="7706352312111511" type="Pig">
                             <param id="0" name="Instance variable">Anger</param>
-                            <param id="1" name="Value">int(20 + random(5))</param>
+                            <param id="1" name="Value">int(ANGERELECTRIC + random(5))</param>
                         </action>
                         <action id="4" name="Set animation" sid="3909005492294831" type="Pig">
                             <param id="0" name="Animation">&quot;Electric&quot;</param>
@@ -98,7 +105,7 @@
                         <condition id="-7" name="Compare instance variable" sid="4066459416866221" type="Pig">
                             <param id="0" name="Instance variable">Anger</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">10</param>
+                            <param id="2" name="Value">ANGERLIMIT</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -158,7 +165,7 @@
             <actions>
                 <action id="-12" name="Subtract from" sid="8657796996175212" type="Pig">
                     <param id="0" name="Instance variable">Anger</param>
-                    <param id="1" name="Value">1</param>
+                    <param id="1" name="Value">ANGER_DEC</param>
                 </action>
             </actions>
             <sub-events>
@@ -210,19 +217,6 @@
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="191823067010036">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="3385810209929667" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="9654583745647849" type="D_Life">
-                    <param id="0" name="Text">Life</param>
-                </action>
-                <action id="0" name="Set text" sid="9370907461824456" type="D_PigAnger">
-                    <param id="0" name="Text">Pig.Anger</param>
-                </action>
-            </actions>
         </event-block>
         <event-block sid="8711774005623995">
             <conditions>
@@ -308,6 +302,16 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="227417980265504">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="272427507055035" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="2894452903174187" type="PigAngry">
+                    <param id="0" name="Width">Pig.Anger</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

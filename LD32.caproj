@@ -100,6 +100,7 @@
                 </animation>
                 <animation framecount="2" loop="1" name="Electric" pingpong="0" repeatcount="1" repeatto="0" sid="996561030199435" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -144,7 +145,9 @@
         <object-type name="1_SpawnPoint" sid="8595932370730523">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3735576867141013" speed="5"/>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3735576867141013" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="D_PigAnger" sid="2297305396091346">
@@ -204,6 +207,30 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="pigbg" sid="3098332647884377">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6436779486173829" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\pigbg.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Health" sid="9677285867359544">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1026743444910199" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0.496" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PigAngry" sid="4607097649799221">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1718191438667664" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -218,20 +245,20 @@
         <event-sheet>Minigame_1.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="WebStorage" uid="1" />
-        <global-instance type="Gamepad" uid="2">
+        <global-instance type="WebStorage" uid="6" />
+        <global-instance type="Gamepad" uid="7">
             <properties>
                 <analog-deadzone>25</analog-deadzone>
             </properties>
         </global-instance>
-        <global-instance type="Keyboard" uid="3" />
-        <global-instance type="Mouse" uid="4" />
-        <global-instance type="Touch" uid="5">
+        <global-instance type="Keyboard" uid="8" />
+        <global-instance type="Mouse" uid="27" />
+        <global-instance type="Touch" uid="28">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Audio" uid="6">
+        <global-instance type="Audio" uid="29">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -245,7 +272,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Browser" uid="7" />
+        <global-instance type="Browser" uid="30" />
     </global-instances>
     <sounds-folder />
     <music-folder />
