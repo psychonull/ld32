@@ -15,14 +15,20 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
-    <used-behaviors />
-    <used-effects />
+    <used-behaviors>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="inverse">Inverse</effect>
+        <effect author="Scirra" id="tint">Tint</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -32,6 +38,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Menu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -93,8 +100,51 @@
                 </animation>
                 <animation framecount="2" loop="1" name="Electric" pingpong="0" repeatcount="1" repeatto="0" sid="996561030199435" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Menu_title" sid="8243520218007692">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="Menu_hint" sid="8361429101563902">
+            <plugin id="Spritefont2" />
+            <instance-variables>
+                <instance-variable name="isWhite" sid="8826608002468624" type="boolean" />
+                <instance-variable name="highlighted" sid="4687301150271088" type="number" />
+            </instance-variables>
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
+            </effects>
+            <texture />
+        </object-type>
+        <object-type name="1_bg" sid="4258298907809406">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Inverse">
+                    <effect id="inverse" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9417711167397769" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="1_sun" sid="9865104677342272">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2087881554026466" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="1_SpawnPoint" sid="8595932370730523">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3735576867141013" speed="5"/>
             </animation-folder>
         </object-type>
         <object-type name="D_PigAnger" sid="2297305396091346">
@@ -133,15 +183,39 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="1_LandingPoint" sid="7807917925964605">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1537249196627958" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.526316" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="1_enemy" sid="777820966829111">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="9801673507651851">
+                    <behavior id="custom" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7587612931512535" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Layout 1.xml</layout>
         <layout>Pig.xml</layout>
+        <layout>Menu.xml</layout>
+        <layout>Minigame_1.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>PigEventSheet.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet Menu.xml</event-sheet>
+        <event-sheet>Minigame_1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Menu</name>
+    <events>
+        <variable constant="0" name="highlighted" sid="9812615342696583" static="0" type="number">0</variable>
+        <event-block sid="4093107081448877">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="2811630192750731" type="System">
+                    <param id="0" name="Interval (seconds)">0.4</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="1676005106158929" type="System">
+                    <param id="0" name="First value">highlighted</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6801597274308448" type="System">
+                    <param id="0" name="Variable">highlighted</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="674399710255785" type="Menu_hint">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9095782339149441">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="5047992836633096" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="6867338709685147" type="System">
+                    <param id="0" name="First value">highlighted</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3743878941972692" type="System">
+                    <param id="0" name="Variable">highlighted</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="3223481368192918" type="Menu_hint">
+                    <param id="0" name="Mode">1</param>
+                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4986722040348369">
+            <conditions>
+                <condition id="4" name="On key code pressed" sid="2233900481091789" type="Keyboard">
+                    <param id="0" name="Keycode">13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="1338000089457803" type="System">
+                    <param id="0" name="Layout">&quot;Minigame_1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
