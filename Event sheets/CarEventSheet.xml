@@ -480,6 +480,9 @@
                             <param id="0" name="Variable">END</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="9513690798835177" type="CarRetry">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="9677955197205832">
@@ -497,6 +500,44 @@
                         <action id="-9" name="Set value" sid="8051400079681569" type="System">
                             <param id="0" name="Variable">END</param>
                             <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7182570782135726" type="CarRetry">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4398414380123278">
+            <conditions>
+                <condition id="4" name="On key code pressed" sid="5701977248019136" type="Keyboard">
+                    <param id="0" name="Keycode">82</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Reload" sid="4876490252529635" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="4296328924470649">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4481855816668557" type="System">
+                    <param id="0" name="Variable">END</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9654829828261488">
+                    <conditions>
+                        <condition id="4" name="On key code pressed" sid="3314354830787836" type="Keyboard">
+                            <param id="0" name="Keycode">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="6264310190128402" type="Browser">
+                            <param id="0" name="URL">&quot;/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
                         </action>
                     </actions>
                 </event-block>
