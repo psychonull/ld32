@@ -274,18 +274,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2572510506537399" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Marcelo\Downloads\doodle.png">
-                        <collision-poly>
-                            <point x="0.346" y="0.576667" />
-                            <point x="0.5" y="0.373333" />
-                            <point x="0.674" y="0.543333" />
-                            <point x="0.628" y="0.5" />
-                            <point x="0.6" y="0.333333" />
-                            <point x="0.5" y="0.413333" />
-                            <point x="0.41" y="0.316667" />
-                            <point x="0.404" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\plane.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -316,7 +305,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5549096741000968" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\Mone.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\money.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -353,7 +342,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6058337256351074" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\Wind.png" />
+                    <frame duration="1" hotspotX="1" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\Wind.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -369,7 +358,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7114797458356576" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\Wind.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="C:\Users\Marcelo\ld32\Textures\Wind.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -611,6 +600,161 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="plane" sid="9408999875380907">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1023749864064587" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\plane.png">
+                        <collision-poly>
+                            <point x="0.116667" y="0.388889" />
+                            <point x="0.5" y="0.222222" />
+                            <point x="0.85" y="0.5" />
+                            <point x="0.883333" y="0.5" />
+                            <point x="0.9" y="0.666667" />
+                            <point x="0.5" y="0.722222" />
+                            <point x="0.133333" y="0.555556" />
+                            <point x="0.0833333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="money_bg" sid="5652750355608877">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7482985816752244" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\money_bg.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cloud1" sid="8452029507107524">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9307736008177029" speed="5">
+                    <frame duration="1" hotspotX="0.507937" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\cloud1.png">
+                        <collision-poly>
+                            <point x="0.206349" y="0.40625" />
+                            <point x="0.492063" y="0.34375" />
+                            <point x="0.809524" y="0.375" />
+                            <point x="0.873016" y="0.5" />
+                            <point x="0.809524" y="0.625" />
+                            <point x="0.492063" y="0.75" />
+                            <point x="0.174603" y="0.65625" />
+                            <point x="0.142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.507937" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\cloud2.png">
+                        <collision-poly>
+                            <point x="0.15873" y="0.3125" />
+                            <point x="0.492063" y="0.3125" />
+                            <point x="0.809524" y="0.375" />
+                            <point x="0.84127" y="0.5" />
+                            <point x="0.793651" y="0.59375" />
+                            <point x="0.492063" y="0.6875" />
+                            <point x="0.238095" y="0.53125" />
+                            <point x="0.142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cloud2" sid="3565067603267995">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9862565345327517" speed="5">
+                    <frame duration="1" hotspotX="0.507937" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\cloud2.png">
+                        <collision-poly>
+                            <point x="0.15873" y="0.3125" />
+                            <point x="0.492063" y="0.3125" />
+                            <point x="0.809524" y="0.375" />
+                            <point x="0.84127" y="0.5" />
+                            <point x="0.793651" y="0.59375" />
+                            <point x="0.492063" y="0.6875" />
+                            <point x="0.238095" y="0.53125" />
+                            <point x="0.142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="money_buildings" sid="4473547824612788">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4984403840671644" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\pjnov_000\Desktop\money_buildings1.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.366197" />
+                            <point x="0.5" y="0.366197" />
+                            <point x="0.865385" y="0.492958" />
+                            <point x="0.884615" y="0.915493" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0961538" y="0.929577" />
+                            <point x="0.115385" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\pjnov_000\Desktop\money_buildings2.png">
+                        <collision-poly>
+                            <point x="0.307692" y="0.225352" />
+                            <point x="0.5" y="0.169014" />
+                            <point x="0.653846" y="0.253521" />
+                            <point x="0.846154" y="0.492958" />
+                            <point x="0.865385" y="0.901408" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0769231" y="0.943662" />
+                            <point x="0.0961538" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\pjnov_000\Desktop\money_buildings3.png">
+                        <collision-poly>
+                            <point x="0.384615" y="0.28169" />
+                            <point x="0.653846" y="0.253521" />
+                            <point x="0.788462" y="0.492958" />
+                            <point x="0.788462" y="0.84507" />
+                            <point x="0.5" y="1" />
+                            <point x="0.211538" y="0.84507" />
+                            <point x="0.211538" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="money_buildings2" sid="6774082171051062">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="792784813966651" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\pjnov_000\Desktop\money_buildings2.png">
+                        <collision-poly>
+                            <point x="0.307692" y="0.225352" />
+                            <point x="0.5" y="0.169014" />
+                            <point x="0.653846" y="0.253521" />
+                            <point x="0.846154" y="0.492958" />
+                            <point x="0.865385" y="0.901408" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0769231" y="0.943662" />
+                            <point x="0.0961538" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="money_buildings3" sid="4673397554203127">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="123380594125297" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\pjnov_000\Desktop\money_buildings3.png">
+                        <collision-poly>
+                            <point x="0.384615" y="0.28169" />
+                            <point x="0.653846" y="0.253521" />
+                            <point x="0.788462" y="0.492958" />
+                            <point x="0.788462" y="0.84507" />
+                            <point x="0.5" y="1" />
+                            <point x="0.211538" y="0.84507" />
+                            <point x="0.211538" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -630,20 +774,20 @@
         <event-sheet>CarEventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="WebStorage" uid="6" />
-        <global-instance type="Gamepad" uid="7">
+        <global-instance type="WebStorage" uid="47" />
+        <global-instance type="Gamepad" uid="48">
             <properties>
                 <analog-deadzone>25</analog-deadzone>
             </properties>
         </global-instance>
-        <global-instance type="Keyboard" uid="8" />
-        <global-instance type="Mouse" uid="27" />
-        <global-instance type="Touch" uid="28">
+        <global-instance type="Keyboard" uid="49" />
+        <global-instance type="Mouse" uid="50" />
+        <global-instance type="Touch" uid="51">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Audio" uid="29">
+        <global-instance type="Audio" uid="52">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -657,7 +801,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Browser" uid="30" />
+        <global-instance type="Browser" uid="53" />
     </global-instances>
     <sounds-folder />
     <music-folder />

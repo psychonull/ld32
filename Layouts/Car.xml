@@ -51,7 +51,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="car_bg2" uid="40">
+                <instance type="car_bg2" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -99,7 +99,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="car_bg" uid="11">
+                <instance type="car_bg" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -121,32 +121,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="car_part2" uid="35">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <damage>0</damage>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>110</x>
-                        <y>90</y>
-                        <z>0</z>
-                        <width>207</width>
-                        <height>110</height>
-                        <depth>0</depth>
-                        <hotspotX>0.502415478</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="car_part3" uid="36">
+                <instance type="car_part2" uid="8">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -171,7 +146,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="car_part4" uid="37">
+                <instance type="car_part3" uid="27">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -196,7 +171,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="car_part5" uid="38">
+                <instance type="car_part4" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -221,7 +196,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="car_part0" uid="34">
+                <instance type="car_part5" uid="29">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -246,7 +221,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="car_part1" uid="10">
+                <instance type="car_part0" uid="30">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -271,7 +246,32 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Hand" uid="41">
+                <instance type="car_part1" uid="42">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <damage>0</damage>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>110</x>
+                        <y>90</y>
+                        <z>0</z>
+                        <width>207</width>
+                        <height>110</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502415478</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Hand" uid="44">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -296,7 +296,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PartsPar0" uid="42">
+                <instance type="PartsPar0" uid="45">
                     <properties>
                         <rate>5</rate>
                         <spray-cone>180</spray-cone>
@@ -354,7 +354,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Health" uid="39">
+                <instance type="Health" uid="46">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

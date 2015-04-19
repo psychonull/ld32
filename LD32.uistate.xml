@@ -11,10 +11,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Pig</layout>
-        <layout order="2">MoneyAttack</layout>
-        <layout order="4">Unused</layout>
-        <event-sheet order="1">PigEventSheet</event-sheet>
-        <event-sheet active="1" order="3">MoneyAttackSheet</event-sheet>
+        <layout active="1" order="1">MoneyAttack</layout>
+        <event-sheet order="2">MoneyAttackSheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -43,11 +41,27 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Health/" />
         <folder expanded="1" path="animation-folder/PigAngry/" />
         <folder expanded="1" path="animation-folder/Bomber/" />
+        <folder expanded="1" path="animation-folder/car_bg/" />
         <folder expanded="1" path="animation-folder/Money/" />
         <folder expanded="1" path="animation-folder/Montain/" />
         <folder expanded="1" path="animation-folder/City/" />
         <folder expanded="1" path="animation-folder/LeftWind/" />
         <folder expanded="1" path="animation-folder/WindSeparator/" />
         <folder expanded="1" path="animation-folder/RightWind/" />
+        <folder expanded="1" path="animation-folder/car_part0/" />
+        <folder expanded="1" path="animation-folder/car_part1/" />
+        <folder expanded="1" path="animation-folder/car_part2/" />
+        <folder expanded="1" path="animation-folder/car_part3/" />
+        <folder expanded="1" path="animation-folder/car_part4/" />
+        <folder expanded="1" path="animation-folder/car_part5/" />
+        <folder expanded="1" path="animation-folder/car_bg2/" />
+        <folder expanded="1" path="animation-folder/BackgroundBlack/" />
+        <folder expanded="1" path="animation-folder/plane/" />
+        <folder expanded="1" path="animation-folder/money_bg/" />
+        <folder expanded="1" path="animation-folder/cloud1/" />
+        <folder expanded="1" path="animation-folder/cloud2/" />
+        <folder expanded="1" path="animation-folder/money_buildings/" />
+        <folder expanded="1" path="animation-folder/money_buildings2/" />
+        <folder expanded="1" path="animation-folder/money_buildings3/" />
     </folders-expanded>
 </c2uistate>
