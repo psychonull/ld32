@@ -551,7 +551,7 @@
                     </conditions>
                     <actions>
                         <action id="7" name="Go to URL" sid="9898214180243277" type="Browser">
-                            <param id="0" name="URL">&quot;/index.html&quot;</param>
+                            <param id="0" name="URL">&quot;../index.html&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>
                     </actions>
