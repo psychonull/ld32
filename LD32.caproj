@@ -309,6 +309,11 @@
     <sounds-folder>
         <file name="come on piggy slow.m4a" />
         <file name="come on piggy slow.ogg" />
+        <file name="pinchazo.ogg" />
+        <file name="electrify1.ogg" />
+        <file name="electrify2.ogg" />
+        <file name="pissedoff1.ogg" />
+        <file name="fail 01.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
