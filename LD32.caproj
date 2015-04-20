@@ -314,8 +314,12 @@
         <file name="electrify2.ogg" />
         <file name="pissedoff1.ogg" />
         <file name="fail 01.ogg" />
+        <file name="pinchazo electric.ogg" />
     </sounds-folder>
-    <music-folder />
+    <music-folder>
+        <file name="music_pig.m4a" />
+        <file name="music_pig.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
