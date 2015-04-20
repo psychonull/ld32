@@ -52,6 +52,12 @@
                     <param id="0" name="Variable">enemiesKilled</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="0" name="Play" sid="9967782861773979" type="Audio">
+                    <param id="0" name="Audio file">bg</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;bg&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="194556826153402">
@@ -256,6 +262,12 @@
                                     <param id="2" name="Y">Mouse.Y</param>
                                     <param id="3" name="Image point">0</param>
                                 </action>
+                                <action id="0" name="Play" sid="4820776386836033" type="Audio">
+                                    <param id="0" name="Audio file">ShootPowa</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="7239424428718566">
@@ -270,6 +282,12 @@
                                     <param id="1" name="X">Mouse.X</param>
                                     <param id="2" name="Y">Mouse.Y</param>
                                     <param id="3" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="9483659534047795" type="Audio">
+                                    <param id="0" name="Audio file">Shoot1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -327,6 +345,13 @@
                             <param id="1" name="Type">1</param>
                             <param id="2" name="Tag">&quot;canjuggle&quot;</param>
                         </action>
+                        <action id="7" name="Play (by name)" sid="5134402060182075" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;juggle&quot; &amp; choose(&quot;1&quot;, &quot;2&quot;)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="6508023059445489">
@@ -343,6 +368,23 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="1291131815389838">
+                                    <conditions>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="8876019234073521" type="Audio">
+                                            <param id="0" name="Tag">&quot;poweredup&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="8566352547584933" type="Audio">
+                                            <param id="0" name="Audio file">poweredup</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">-13</param>
+                                            <param id="1" name="Tag (optional)">&quot;poweredup&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="6237354190156398">
                             <conditions>
@@ -417,6 +459,9 @@
                 <action id="-13" name="Set boolean" sid="2704125805737299" type="1_sun">
                     <param id="0" name="Instance variable">isOP</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="6" name="Stop" sid="6848829850947304" type="Audio">
+                    <param id="0" name="Tag">&quot;poweredup&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -503,6 +548,13 @@
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
                         </action>
+                        <action id="7" name="Play (by name)" sid="3507357067487696" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;EnemyBall&quot; &amp; choose(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="9824234956186185">
@@ -541,6 +593,12 @@
                                 <action id="-10" name="Add to" sid="2737821043776395" type="System">
                                     <param id="0" name="Variable">enemiesKilled</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="2699504061076748" type="Audio">
+                                    <param id="0" name="Audio file">EnemyExplosion</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -675,6 +733,12 @@
                         <action id="4" name="Set animation" sid="1236738560551924" type="1_player">
                             <param id="0" name="Animation">&quot;death_idle&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="8558974537539112" type="Audio">
+                            <param id="0" name="Audio file">death</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                     <sub-events>

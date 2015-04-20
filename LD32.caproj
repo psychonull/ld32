@@ -553,8 +553,32 @@
         </global-instance>
         <global-instance type="Browser" uid="31" />
     </global-instances>
-    <sounds-folder />
-    <music-folder />
+    <sounds-folder>
+        <file name="EnemyBall.m4a" />
+        <file name="EnemyBall.ogg" />
+        <file name="EnemyBall2.m4a" />
+        <file name="EnemyBall2.ogg" />
+        <file name="EnemyBall3.m4a" />
+        <file name="EnemyBall3.ogg" />
+        <file name="EnemyExplosion.m4a" />
+        <file name="EnemyExplosion.ogg" />
+        <file name="juggle1.m4a" />
+        <file name="juggle1.ogg" />
+        <file name="juggle2.m4a" />
+        <file name="juggle2.ogg" />
+        <file name="Shoot1.m4a" />
+        <file name="Shoot1.ogg" />
+        <file name="ShootPowa.m4a" />
+        <file name="ShootPowa.ogg" />
+        <file name="death.m4a" />
+        <file name="death.ogg" />
+        <file name="poweredup.m4a" />
+        <file name="poweredup.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="bg.m4a" />
+        <file name="bg.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
