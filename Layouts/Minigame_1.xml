@@ -169,6 +169,7 @@
                     </properties>
                     <instance-variables>
                         <isOP>false</isOP>
+                        <canjuggle>true</canjuggle>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -185,6 +186,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -546,8 +548,8 @@
                         <character-width>16</character-width>
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>You lost.</text>
-                        <scale>0.5</scale>
+                        <text>R - Retry</text>
+                        <scale>1</scale>
                         <initial-visibility>Invisible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -559,11 +561,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>120.263183594</x>
-                        <y>48.303527832</y>
+                        <x>3.467483521</x>
+                        <y>135.046142578</y>
                         <z>0</z>
-                        <width>77.740936279</width>
-                        <height>15.656719208</height>
+                        <width>170.630813599</width>
+                        <height>21.120922089</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -576,8 +578,8 @@
                         <character-width>16</character-width>
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>Press any key to start again</text>
-                        <scale>0.5</scale>
+                        <text>ENTER - continue</text>
+                        <scale>1</scale>
                         <initial-visibility>Invisible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -589,11 +591,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>50.597854614</x>
-                        <y>70.843063354</y>
+                        <x>2.787322998</x>
+                        <y>154.85369873</y>
                         <z>0</z>
-                        <width>225.953735352</width>
-                        <height>14.290672302</height>
+                        <width>275.13092041</width>
+                        <height>19.754631042</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -623,7 +625,7 @@
                         <y>0.077575684</y>
                         <z>0</z>
                         <width>96.864471436</width>
-                        <height>30</height>
+                        <height>8.143642426</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -654,6 +656,36 @@
                         <z>0</z>
                         <width>109.842407227</width>
                         <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="1_play_again" uid="22">
+                    <properties>
+                        <character-width>16</character-width>
+                        <character-height>16</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <text>DEFEATED</text>
+                        <scale>1</scale>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>86.112808228</x>
+                        <y>36.009231567</y>
+                        <z>0</z>
+                        <width>131.015945435</width>
+                        <height>17.705883026</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

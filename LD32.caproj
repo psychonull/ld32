@@ -18,7 +18,6 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
@@ -28,11 +27,11 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="inverse">Inverse</effect>
-        <effect author="Scirra" id="tint">Tint</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -52,16 +51,12 @@
         <prop name="Fullscreen scaling">Low quality</prop>
         <prop name="Fullscreen scaling quality">Low</prop>
         <prop name="Hide address bar">No</prop>
-        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Loader style">Progress bar only</prop>
         <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="TiledBackground" sid="3206956448522659">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
         <object-type name="WebStorage" sid="1510269620771624">
             <plugin id="WebStorage" />
         </object-type>
@@ -86,46 +81,6 @@
         <object-type name="Text" sid="2985603725420557">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Pig" sid="1590700420757518">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Anger" sid="8904351599632911" type="number" />
-                <instance-variable name="IsBlocking" sid="7965141881492848" type="boolean" />
-                <instance-variable name="IsAngry" sid="7693806030031473" type="boolean" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1944863421714708" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-                <animation framecount="1" loop="0" name="Hurt" pingpong="0" repeatcount="1" repeatto="0" sid="9830672703739405" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-                <animation framecount="1" loop="1" name="Angry" pingpong="0" repeatcount="1" repeatto="0" sid="4961327354115573" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-                <animation framecount="2" loop="1" name="Electric" pingpong="0" repeatcount="1" repeatto="0" sid="996561030199435" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Menu_title" sid="8243520218007692">
-            <plugin id="Spritefont2" />
-            <texture />
-        </object-type>
-        <object-type name="Menu_hint" sid="8361429101563902">
-            <plugin id="Spritefont2" />
-            <instance-variables>
-                <instance-variable name="isWhite" sid="8826608002468624" type="boolean" />
-                <instance-variable name="highlighted" sid="4687301150271088" type="number" />
-            </instance-variables>
-            <effects>
-                <effect-type name="Tint">
-                    <effect id="tint" />
-                </effect-type>
-            </effects>
-            <texture />
-        </object-type>
         <object-type name="1_bg" sid="4258298907809406">
             <plugin id="Sprite" />
             <effects>
@@ -143,10 +98,14 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="isOP" sid="5683839267344892" type="boolean" />
+                <instance-variable name="canjuggle" sid="3534159378013863" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Physics" sid="8247713541538605">
                     <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="9073879915410865">
+                    <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -178,25 +137,6 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6278873470307203" speed="5">
                     <frame duration="1" hotspotX="0.502439" hotspotY="0.5" original-source="C:\Users\pjnov_000\Desktop\hand.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="pigeye" sid="3526419271427098">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5493544659088078" speed="5">
-                    <frame duration="1" hotspotX="0.25" hotspotY="0.7" original-source="C:\Users\pjnov_000\Desktop\pigeye.png">
-                        <collision-poly>
-                            <point x="0.25" y="0.3" />
-                            <point x="0.5" y="0.2" />
-                            <point x="0.75" y="0.3" />
-                            <point x="0.833333" y="0.5" />
-                            <point x="0.75" y="0.7" />
-                            <point x="0.5" y="0.9" />
-                            <point x="0.25" y="0.7" />
-                            <point x="0.166667" y="0.5" />
-                        </collision-poly>
-                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -558,14 +498,9 @@
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Pig.xml</layout>
-        <layout>Menu.xml</layout>
         <layout>Minigame_1.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>PigEventSheet.xml</event-sheet>
-        <event-sheet>Event sheet 1.xml</event-sheet>
-        <event-sheet>Event sheet Menu.xml</event-sheet>
         <event-sheet>Minigame_1.xml</event-sheet>
     </event-folder>
     <global-instances>
