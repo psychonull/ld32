@@ -794,6 +794,9 @@
         <object-type name="Text2" sid="8743940982725685">
             <plugin id="Text" />
         </object-type>
+        <object-type name="GameOver" sid="5048854761460529">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
