@@ -433,7 +433,10 @@
         <file name="Laser_Shoot4.m4a" />
         <file name="Laser_Shoot4.ogg" />
     </sounds-folder>
-    <music-folder />
+    <music-folder>
+        <file name="music1.m4a" />
+        <file name="music1.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
