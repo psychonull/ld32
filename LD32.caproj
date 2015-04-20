@@ -14,6 +14,7 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -23,10 +24,11 @@
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
-        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
-        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
-        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="inverse">Inverse</effect>
@@ -103,6 +105,7 @@
                 </animation>
                 <animation framecount="2" loop="1" name="Electric" pingpong="0" repeatcount="1" repeatto="0" sid="996561030199435" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -138,16 +141,27 @@
         </object-type>
         <object-type name="1_sun" sid="9865104677342272">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="isOP" sid="5683839267344892" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Physics" sid="8247713541538605">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2087881554026466" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="1_SpawnPoint" sid="8595932370730523">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3735576867141013" speed="5"/>
+                <animation framecount="2" loop="1" name="OnFire" pingpong="0" repeatcount="1" repeatto="0" sid="7508491656270448" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="3" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="2372683916223818" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="D_PigAnger" sid="2297305396091346">
@@ -186,56 +200,348 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="1_LandingPoint" sid="7807917925964605">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1537249196627958" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.526316" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="1_enemy" sid="777820966829111">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="health" sid="5578182775705228" type="number" />
+            </instance-variables>
             <behaviors>
-                <behavior-type name="CustomMovement" sid="9801673507651851">
-                    <behavior id="custom" />
+                <behavior-type name="Physics" sid="6433161386390359">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="3387007570706905">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="4037935641426938">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7587612931512535" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
+                <animation framecount="1" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="4764259174802454" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
             </animation-folder>
         </object-type>
-        <object-type name="1_ball" sid="6300262857522165">
+        <object-type name="1_player" sid="2962765570025504">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="currentAnimation" sid="9862005579773595" type="string" />
+                <instance-variable name="powerups" sid="5808580193639907" type="number" />
+                <instance-variable name="isGettingUp" sid="3153362674908857" type="boolean" />
+            </instance-variables>
             <behaviors>
-                <behavior-type name="BoundToLayout" sid="2443433965350367">
-                    <behavior id="bound" />
+                <behavior-type name="8Direction" sid="8752969228657615">
+                    <behavior id="EightDir" />
                 </behavior-type>
-                <behavior-type name="Physics" sid="2778856285298145">
-                    <behavior id="Physics" />
-                </behavior-type>
-                <behavior-type name="Solid" sid="6263564002432844">
-                    <behavior id="solid" />
+                <behavior-type name="Wrap" sid="6029833313084087">
+                    <behavior id="wrap" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3037332342280104" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8081367913395643" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\marado levantada posta1.png">
                         <collision-poly>
-                            <point x="0.166667" y="0.166667" />
-                            <point x="0.5" y="0" />
-                            <point x="0.9375" y="0.0791667" />
-                            <point x="0.966667" y="0.5" />
-                            <point x="0.825" y="0.883333" />
-                            <point x="0.5" y="1" />
-                            <point x="0.1" y="0.9" />
-                            <point x="0" y="0.5" />
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="4" loop="0" name="left" pingpong="0" repeatcount="1" repeatto="0" sid="6059207344678342" speed="13">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\marado izq1.png">
+                        <collision-poly>
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\marado izq2.png">
+                        <collision-poly>
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\marado izq3.png">
+                        <collision-poly>
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.25" y="0.875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\marado izq4.png">
+                        <collision-poly>
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9125" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="right" pingpong="0" repeatcount="1" repeatto="0" sid="5711356038194474" speed="13">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_marado_der1.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_marado_der2.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_marado_der3.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.25" y="0.875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_marado_der4.png" />
+                </animation>
+                <animation framecount="3" loop="0" name="getup_right" pingpong="0" repeatcount="1" repeatto="0" sid="5232756085307751" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\marado levantada posta1.png">
+                        <collision-poly>
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\marado levantada posta2.png">
+                        <collision-poly>
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.6" y="0.8" />
+                            <point x="0.5" y="0.8125" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="getup_left" pingpong="0" repeatcount="1" repeatto="0" sid="409474545993558" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.275" y="0.8625" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="3" loop="0" name="getup_right_2" pingpong="0" repeatcount="1" repeatto="0" sid="5619831672553441" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.7625" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="getup_up" pingpong="0" repeatcount="1" repeatto="0" sid="339818023589855" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.425" y="0.2125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.55" y="0.225" />
+                            <point x="0.775" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.925" />
+                            <point x="0.275" y="0.8625" />
+                            <point x="0.275" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="5" loop="0" name="death" pingpong="0" repeatcount="1" repeatto="0" sid="7307582458670118" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_death1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_death2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_death3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_death4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_death5.png" />
+                </animation>
+                <animation framecount="3" loop="1" name="death_idle" pingpong="0" repeatcount="1" repeatto="0" sid="3281948142806622" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_death_idle1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_death_idle2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_death_idle3.png" />
+                </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="1_floor" sid="5643312845886714">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="1170992943589205">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1052693086677814" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.6" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="1_jueguitos" sid="2834933693353103">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="1_sides" sid="7252183599425118">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="5673276963368914">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5550115447125478" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.6" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="1_enemiesKilled" sid="2909879391486896">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="1_bullet" sid="5154856409836783">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="632122106752751">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2313574564148138" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="1_play_again" sid="9130863170613959">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="1_sun_particle" sid="5704531363676247">
+            <plugin id="Particles" />
+            <texture />
         </object-type>
     </object-folder>
     <families />
@@ -251,20 +557,20 @@
         <event-sheet>Minigame_1.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="WebStorage" uid="1" />
-        <global-instance type="Gamepad" uid="2">
+        <global-instance type="WebStorage" uid="6" />
+        <global-instance type="Gamepad" uid="7">
             <properties>
                 <analog-deadzone>25</analog-deadzone>
             </properties>
         </global-instance>
-        <global-instance type="Keyboard" uid="3" />
-        <global-instance type="Mouse" uid="4" />
-        <global-instance type="Touch" uid="5">
+        <global-instance type="Keyboard" uid="8" />
+        <global-instance type="Mouse" uid="28" />
+        <global-instance type="Touch" uid="29">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Audio" uid="6">
+        <global-instance type="Audio" uid="30">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -278,7 +584,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Browser" uid="7" />
+        <global-instance type="Browser" uid="31" />
     </global-instances>
     <sounds-folder />
     <music-folder />
