@@ -50,6 +50,12 @@
                         <action id="0" name="Set text" sid="8536368068124037" type="MoneyQty">
                             <param id="0" name="Text">moneyQuantity</param>
                         </action>
+                        <action id="0" name="Play" sid="7151019217342311" type="Audio">
+                            <param id="0" name="Audio file">Laser_Shoot4</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -256,6 +262,12 @@
                 <action id="0" name="Set text" sid="9499542132626364" type="MoneyQty2">
                     <param id="0" name="Text">correctShoots</param>
                 </action>
+                <action id="0" name="Play" sid="8908186119135941" type="Audio">
+                    <param id="0" name="Audio file">Hit_Hurt</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3603312624434214">
@@ -268,6 +280,12 @@
                 </action>
                 <action id="-5" name="Set width" sid="9860240085787871" type="RightWind">
                     <param id="0" name="Width">0</param>
+                </action>
+                <action id="0" name="Play" sid="6750032635667879" type="Audio">
+                    <param id="0" name="Audio file">plane3</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -571,6 +589,21 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="7175841675419887">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="4024402246853246" type="System">
+                            <param id="0" name="First value">correctShoots</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="7036849348939627" type="WebStorage">
+                            <param id="0" name="Key">&quot;MoneyAttack&quot;</param>
+                            <param id="1" name="Value">&quot;Complete&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="7378528419328113">
@@ -601,12 +634,25 @@
                     </conditions>
                     <actions>
                         <action id="7" name="Go to URL" sid="4075893321790093" type="Browser">
-                            <param id="0" name="URL">&quot;/index.html&quot;</param>
+                            <param id="0" name="URL">&quot;../index.html&quot;</param>
                             <param id="1" name="Target">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="4982193627485766">
+            <conditions>
+                <condition id="4" name="On key code pressed" sid="975691695638106" type="Keyboard">
+                    <param id="0" name="Keycode">27</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="8909505084371419" type="Browser">
+                    <param id="0" name="URL">&quot;../index.html&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

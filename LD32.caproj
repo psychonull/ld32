@@ -844,7 +844,14 @@
         </global-instance>
         <global-instance type="Browser" uid="53" />
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="Hit_Hurt.m4a" />
+        <file name="Hit_Hurt.ogg" />
+        <file name="plane3.m4a" />
+        <file name="plane3.ogg" />
+        <file name="Laser_Shoot4.m4a" />
+        <file name="Laser_Shoot4.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
