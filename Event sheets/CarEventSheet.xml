@@ -518,6 +518,19 @@
                 <action id="9" name="Reload" sid="4876490252529635" type="Browser" />
             </actions>
         </event-block>
+        <event-block sid="8041085580764163">
+            <conditions>
+                <condition id="4" name="On key code pressed" sid="4883305252725991" type="Keyboard">
+                    <param id="0" name="Keycode">27</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="9973576541311346" type="Browser">
+                    <param id="0" name="URL">&quot;../index.html&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="4296328924470649">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="4481855816668557" type="System">
