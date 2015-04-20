@@ -66,6 +66,12 @@
                         <condition id="-22" name="Else" sid="2203788293351041" type="System" />
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="7551798669615121" type="Audio">
+                            <param id="0" name="Audio file">pinchazo</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-11" name="Subtract from" sid="3784546086067986" type="System">
                             <param id="0" name="Variable">PigLife</param>
                             <param id="1" name="Value">1</param>
@@ -121,6 +127,13 @@
                         <action id="-13" name="Set boolean" sid="1084246947292918" type="Pig">
                             <param id="0" name="Instance variable">IsBlocking</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="3604541662469133" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;electrify&quot; &amp; choose(&quot;1&quot;,&quot;2&quot;)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;mood&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -483,6 +496,12 @@
                         <action id="-5" name="Set width" sid="8473226668011441" type="Health">
                             <param id="0" name="Width">Life</param>
                         </action>
+                        <action id="0" name="Play" sid="6946310477503762" type="Audio">
+                            <param id="0" name="Audio file">fail 01</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="4473418105045863">
@@ -518,6 +537,23 @@
                                     <param id="0" name="Width">PigLife</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="863261411561772">
+                                    <conditions>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="1139221128445917" type="Audio">
+                                            <param id="0" name="Tag">&quot;mood&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="8371462025044107" type="Audio">
+                                            <param id="0" name="Audio file">pissedoff1</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;mood&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
