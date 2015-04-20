@@ -31,7 +31,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="5808033863744718">
+        <event-block disabled="1" sid="5808033863744718">
             <conditions>
                 <condition id="-18" name="On created" sid="507986745857128" type="1_enemy" />
             </conditions>
@@ -436,6 +436,17 @@
         </event-block>
         <event-group description="" sid="7585014944264066" title="Enemy">
             <sub-events>
+                <event-block sid="6285756586115042">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="154504122962669" type="1_enemy" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="9484855769058792" type="1_enemy">
+                            <param id="0" name="Instance variable">speed</param>
+                            <param id="1" name="Value">random(1, 4)</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="9638868349005403">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="9731954111955001" type="System">
@@ -451,7 +462,7 @@
                             <param id="1" name="Y">random(0, 60)</param>
                         </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="3139462497117649" type="1_enemy">
-                            <param id="0" name="Speed">30</param>
+                            <param id="0" name="Speed">30 * 1_enemy.speed</param>
                         </action>
                     </actions>
                 </event-block>
@@ -469,7 +480,7 @@
                             <param id="1" name="Y">random(0, 60)</param>
                         </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="255928820196762" type="1_enemy">
-                            <param id="0" name="Speed">30</param>
+                            <param id="0" name="Speed">30 * 1_enemy.speed</param>
                         </action>
                     </actions>
                 </event-block>
@@ -538,7 +549,7 @@
                 <event-block sid="8127294026161235">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="7488723612757325" type="System">
-                            <param id="0" name="Interval (seconds)">5</param>
+                            <param id="0" name="Interval (seconds)">(enemiesKilled &lt; 10 ? 16 : (enemiesKilled &lt; 25 ?&#x09;14 : 12&#x09;)) * 0.3</param>
                         </condition>
                         <condition id="-16" name="Pick random instance" sid="739680574594606" type="System">
                             <param id="0" name="Object">1_enemy</param>
@@ -552,14 +563,78 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="7033716217454998">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="6507864028724881" type="System">
+                            <param id="0" name="Interval (seconds)">random(2,8)</param>
+                        </condition>
+                        <condition id="-16" name="Pick random instance" sid="4810143732502976" type="System">
+                            <param id="0" name="Object">1_enemy</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="4481781719433606" type="System">
+                            <param id="0" name="Variable">enemiesKilled</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="643849748392382" type="1_enemy">
+                            <param id="0" name="Object">1_bullet</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9948935475110691">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="2919731786112004" type="System">
+                            <param id="0" name="Interval (seconds)">random(8,16)</param>
+                        </condition>
+                        <condition id="-16" name="Pick random instance" sid="6003976359413517" type="System">
+                            <param id="0" name="Object">1_enemy</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5828953367542824" type="System">
+                            <param id="0" name="Variable">enemiesKilled</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="4456522693087756" type="1_enemy">
+                            <param id="0" name="Object">1_bullet</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="8959051657372604">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="6424130063113164" type="System">
-                            <param id="0" name="Interval (seconds)">10</param>
+                            <param id="0" name="Interval (seconds)">(enemiesKilled &lt; 5 ? 10 : (enemiesKilled &lt; 12 ?&#x09;8 : 5&#x09;))</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="9173628449804921" type="System">
+                            <param id="0" name="Object to create">1_enemy</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">random(10, 300)</param>
+                            <param id="3" name="Y">-20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3885399742036152">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="618980639174415" type="System">
+                            <param id="0" name="Interval (seconds)">random(5,20)</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7103258376914191" type="System">
+                            <param id="0" name="Variable">enemiesKilled</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="1051063448457056" type="System">
                             <param id="0" name="Object to create">1_enemy</param>
                             <param id="1" name="Layer">&quot;game&quot;</param>
                             <param id="2" name="X">random(10, 300)</param>

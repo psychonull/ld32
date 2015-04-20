@@ -215,6 +215,7 @@
                     </properties>
                     <instance-variables>
                         <health>100</health>
+                        <speed>1</speed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">

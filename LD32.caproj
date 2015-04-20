@@ -144,6 +144,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="health" sid="5578182775705228" type="number" />
+                <instance-variable name="speed" sid="2008520807172012" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Physics" sid="6433161386390359">
