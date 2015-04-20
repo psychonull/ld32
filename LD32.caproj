@@ -43,7 +43,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Menu</first-layout>
+    <first-layout>Minigame_1</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -255,8 +255,8 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="4" loop="0" name="left" pingpong="0" repeatcount="1" repeatto="0" sid="6059207344678342" speed="13">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\marado izq1.png">
+                <animation framecount="4" loop="0" name="left" pingpong="0" repeatcount="1" repeatto="0" sid="6059207344678342" speed="16">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\marado izq3.png">
                         <collision-poly>
                             <point x="0.225" y="0.1125" />
                             <point x="0.5" y="0.025" />
@@ -264,7 +264,7 @@
                             <point x="0.8" y="0.5" />
                             <point x="0.55" y="0.775" />
                             <point x="0.5" y="0.9" />
-                            <point x="0.2" y="0.9" />
+                            <point x="0.25" y="0.875" />
                             <point x="0.125" y="0.5" />
                         </collision-poly>
                     </frame>
@@ -280,18 +280,6 @@
                             <point x="0.125" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\marado izq3.png">
-                        <collision-poly>
-                            <point x="0.225" y="0.1125" />
-                            <point x="0.5" y="0.025" />
-                            <point x="0.5" y="0.25" />
-                            <point x="0.8" y="0.5" />
-                            <point x="0.55" y="0.775" />
-                            <point x="0.5" y="0.9" />
-                            <point x="0.25" y="0.875" />
-                            <point x="0.125" y="0.5" />
-                        </collision-poly>
-                    </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\marado izq4.png">
                         <collision-poly>
                             <point x="0.225" y="0.1125" />
@@ -304,9 +292,21 @@
                             <point x="0.125" y="0.5" />
                         </collision-poly>
                     </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.225" y="0.1125" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8" y="0.5" />
+                            <point x="0.55" y="0.775" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.2" y="0.9" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
-                <animation framecount="4" loop="0" name="right" pingpong="0" repeatcount="1" repeatto="0" sid="5711356038194474" speed="13">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_marado_der1.png">
+                <animation framecount="4" loop="0" name="right" pingpong="0" repeatcount="1" repeatto="0" sid="5711356038194474" speed="16">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_marado_der3.png">
                         <collision-poly>
                             <point x="0.25" y="0.125" />
                             <point x="0.5" y="0.025" />
@@ -314,7 +314,7 @@
                             <point x="0.8" y="0.5" />
                             <point x="0.55" y="0.775" />
                             <point x="0.5" y="0.9" />
-                            <point x="0.2" y="0.9" />
+                            <point x="0.25" y="0.875" />
                             <point x="0.125" y="0.5" />
                         </collision-poly>
                     </frame>
@@ -330,7 +330,8 @@
                             <point x="0.125" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_marado_der3.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_marado_der4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.25" y="0.125" />
                             <point x="0.5" y="0.025" />
@@ -338,11 +339,10 @@
                             <point x="0.8" y="0.5" />
                             <point x="0.55" y="0.775" />
                             <point x="0.5" y="0.9" />
-                            <point x="0.25" y="0.875" />
+                            <point x="0.2" y="0.9" />
                             <point x="0.125" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\sprite_marado_der4.png" />
                 </animation>
                 <animation framecount="3" loop="0" name="getup_right" pingpong="0" repeatcount="1" repeatto="0" sid="5232756085307751" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\matia_000\Documents\GitHub\ld32\rawimg\marado levantada posta1.png">
@@ -541,6 +541,18 @@
         </object-type>
         <object-type name="1_sun_particle" sid="5704531363676247">
             <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="1_top_bg" sid="8346915737700767">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3400839460640773" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.533333" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="1_static_text" sid="6512122762997949">
+            <plugin id="Spritefont2" />
             <texture />
         </object-type>
     </object-folder>

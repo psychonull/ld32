@@ -104,6 +104,17 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="1204145968332698">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="6176918461529686" type="1_player" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="9498629312985016" type="1_player">
+                            <param id="0" name="Instance variable">currentAnimation</param>
+                            <param id="1" name="Value">&quot;Default&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="9048155040012983">
                     <conditions>
                         <condition id="0" name="On click" sid="3912389846526679" type="Mouse">
@@ -182,35 +193,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="5999569159301902">
-                    <conditions>
-                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="7975328997125766" type="1_player" />
-                        <condition id="2" inverted="1" name="Is playing" sid="6250060336642855" type="1_player">
-                            <param id="0" name="Animation">&quot;getup_left&quot;</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="9867605425076562" type="1_player">
-                            <param id="0" name="Animation">&quot;getup_right&quot;</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="9977714499872392" type="1_player">
-                            <param id="0" name="Animation">&quot;getup_right_2&quot;</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="1090225718444789" type="1_player">
-                            <param id="0" name="Animation">&quot;getup_up&quot;</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="7889738780728789" type="1_player">
-                            <param id="0" name="Animation">&quot;death&quot;</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="6802661150984679" type="1_player">
-                            <param id="0" name="Animation">&quot;death_idle&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="5178921385391473" type="1_player">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="7049151647710777" title="Player - Ball">
@@ -283,8 +265,8 @@
                             <param id="1" name="Y component">0</param>
                         </action>
                         <action behavior="Physics" id="0" name="Apply force" sid="7892593952266979" type="1_sun">
-                            <param id="0" name="Force X">(random(1, 2) + (1_player.powerups * random(2,10))) * choose(1, -1)</param>
-                            <param id="1" name="Force Y">-1 * (random(30, 60) * ( 1 + (1_player.powerups / 10)))</param>
+                            <param id="0" name="Force X">clamp( (random(1, 2) + (1_player.powerups * random(1,3))),1,20) * choose(1, -1)</param>
+                            <param id="1" name="Force Y">-1 * clamp( (random(30, 60) * ( 1 + (1_player.powerups / 10))), 25, 70)</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-11" name="Add to" sid="7544533379612722" type="1_player">
@@ -348,6 +330,10 @@
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="518813029781997" type="1_sun">
                     <param id="0" name="Object">1_floor</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="8685366538584373" type="1_sun">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">166</param>
                 </condition>
             </conditions>
             <actions>
@@ -415,25 +401,6 @@
                         </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="255928820196762" type="1_enemy">
                             <param id="0" name="Speed">30</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="4824931052175119">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="9406663453628726" type="1_enemy">
-                            <param id="0" name="Instance variable">health</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="5433782427883178" type="System">
-                            <param id="0" name="Seconds">1</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="6629912214164186" type="1_enemy" />
-                        <action id="-10" name="Add to" sid="460380035900141" type="System">
-                            <param id="0" name="Variable">enemiesKilled</param>
-                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -601,16 +568,51 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="8214907692946061">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="4073765137245196" type="1_play_again" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2590152171198852">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="3459199229787629" type="Keyboard">
+                                    <param id="0" name="Key">82 (R)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="3648909337095036" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="1749949910037488">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="6894959481010441" type="Keyboard">
+                                    <param id="0" name="Key">13 (Return)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Go to URL" sid="5348801645780281" type="Browser">
+                                    <param id="0" name="URL">&quot;../index.html&quot;</param>
+                                    <param id="1" name="Target">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6085005171992931">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="7907519027683031" type="Keyboard">
+                            <param id="0" name="Key">27 (Esc)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="579668918362954" type="Browser">
+                            <param id="0" name="URL">&quot;../index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="8214907692946061">
-            <conditions>
-                <condition id="1" name="On any key pressed" sid="3459199229787629" type="Keyboard" />
-                <condition id="-9" name="Is visible" sid="4073765137245196" type="1_play_again" />
-            </conditions>
-            <actions>
-                <action id="-26" name="Restart layout" sid="3648909337095036" type="System" />
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>
