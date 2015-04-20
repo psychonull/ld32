@@ -779,10 +779,19 @@
         <object-type name="MoneyQty2" sid="9681929385592554">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text2" sid="4736700598766692">
+        <object-type name="RemainingMoney" sid="4736700598766692">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text3" sid="5076366864446358">
+        <object-type name="DeliveredMoney" sid="5076366864446358">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Retry" sid="5000923183794399">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Retry2" sid="7073669957462625">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text2" sid="8743940982725685">
             <plugin id="Text" />
         </object-type>
     </object-folder>

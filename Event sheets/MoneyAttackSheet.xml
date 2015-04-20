@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MoneyAttackSheet</name>
     <events>
+        <variable constant="0" name="END" sid="886172668091411" static="0" type="number">0</variable>
         <variable constant="0" name="correctShoots" sid="2846784496993824" static="0" type="number">0</variable>
         <variable constant="0" name="newWind" sid="5650058036309211" static="0" type="number">0</variable>
         <variable constant="0" name="buildingSpeed" sid="6298201871619866" static="0" type="number">30</variable>
@@ -12,30 +13,46 @@
         <variable constant="0" name="moneyQuantity" sid="740316696200057" static="0" type="number">100</variable>
         <variable constant="0" name="elementType" sid="899803460203676" static="0" type="number">0</variable>
         <variable constant="0" name="wind" sid="4664775453145421" static="0" type="number">0</variable>
-        <event-block sid="1273697583964644">
+        <event-block sid="9003804295995808">
             <conditions>
-                <condition id="0" name="On key pressed" sid="9298298503668738" type="Keyboard">
-                    <param id="0" name="Key">32 (Barra Espaciadora)</param>
+                <condition id="-8" name="Compare two values" sid="8873569886854225" type="System">
+                    <param id="0" name="First value">END</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-3" name="Create object" sid="317093981124451" type="System">
-                    <param id="0" name="Object to create">Money</param>
-                    <param id="1" name="Layer">2</param>
-                    <param id="2" name="X">Bomber.X</param>
-                    <param id="3" name="Y">Bomber.Y</param>
-                </action>
-                <action behavior="Bullet" id="0" name="Set speed" sid="1040278480785275" type="Money">
-                    <param id="0" name="Speed">4 * -wind</param>
-                </action>
-                <action id="-9" name="Set value" sid="128321627647196" type="System">
-                    <param id="0" name="Variable">moneyQuantity</param>
-                    <param id="1" name="Value">moneyQuantity - 1</param>
-                </action>
-                <action id="0" name="Set text" sid="3449202461715243" type="MoneyQty">
-                    <param id="0" name="Text">moneyQuantity</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="223683436036865">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="1487271217187257">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="8622862179451413" type="Keyboard">
+                            <param id="0" name="Key">32 (Barra Espaciadora)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="6756030387935457" type="System">
+                            <param id="0" name="Object to create">Money</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="X">Bomber.X</param>
+                            <param id="3" name="Y">Bomber.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="9402568019792406" type="Money">
+                            <param id="0" name="Speed">4 * -wind</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8181578095011607" type="System">
+                            <param id="0" name="Variable">moneyQuantity</param>
+                            <param id="1" name="Value">moneyQuantity - 1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8536368068124037" type="MoneyQty">
+                            <param id="0" name="Text">moneyQuantity</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="4143502435033681">
             <conditions>
@@ -144,51 +161,63 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="2171296809110456">
+        <event-block sid="8783776743202694">
             <conditions>
-                <condition id="2" name="Key is down" sid="6732317755498708" type="Keyboard">
-                    <param id="0" name="Key">39 (Right arrow)</param>
+                <condition id="-8" name="Compare two values" sid="1360139306342096" type="System">
+                    <param id="0" name="First value">END</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="5331976850023682">
+                <event-block sid="9612555742235263">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="9406483524082218" type="System">
-                            <param id="0" name="First value">Bomber.X</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">300</param>
+                        <condition id="2" name="Key is down" sid="7013986523470594" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-1" name="Set X" sid="400866511579307" type="Bomber">
-                            <param id="0" name="X">Bomber.X +1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6301118136886984">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="8542419228450698" type="System">
+                                    <param id="0" name="First value">Bomber.X</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="515053793170175" type="Bomber">
+                                    <param id="0" name="X">Bomber.X - 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="3339890591828554">
-            <conditions>
-                <condition id="2" name="Key is down" sid="3880741860729147" type="Keyboard">
-                    <param id="0" name="Key">37 (Left arrow)</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="1526283810052916">
+                <event-block sid="756659912307251">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="1544408402824597" type="System">
-                            <param id="0" name="First value">Bomber.X</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">20</param>
+                        <condition id="2" name="Key is down" sid="657060295954771" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-1" name="Set X" sid="4435170637114983" type="Bomber">
-                            <param id="0" name="X">Bomber.X - 1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6716326519385482">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2519999872625029" type="System">
+                                    <param id="0" name="First value">Bomber.X</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">300</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="6217845583746868" type="Bomber">
+                                    <param id="0" name="X">Bomber.X +1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -375,51 +404,63 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1195374802408447">
+        <event-block sid="847346257283667">
             <conditions>
-                <condition id="2" name="Key is down" sid="5032153907368789" type="Keyboard">
-                    <param id="0" name="Key">40 (Down arrow)</param>
+                <condition id="-8" name="Compare two values" sid="778927315838393" type="System">
+                    <param id="0" name="First value">END</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="7930153841565578">
+                <event-block sid="9784448682902356">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="1543634024205096" type="System">
-                            <param id="0" name="First value">Bomber.Y</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">100</param>
+                        <condition id="2" name="Key is down" sid="8091602694210761" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-2" name="Set Y" sid="4519292324534753" type="Bomber">
-                            <param id="0" name="Y">Bomber.Y + 1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7323106903713537">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2678074321247966" type="System">
+                                    <param id="0" name="First value">Bomber.Y</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="773607801174632" type="Bomber">
+                                    <param id="0" name="Y">Bomber.Y -1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="6139932320385888">
-            <conditions>
-                <condition id="2" name="Key is down" sid="5079058513420656" type="Keyboard">
-                    <param id="0" name="Key">38 (Up arrow)</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="7350032614598338">
+                <event-block sid="9875773929390825">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="7868140504340805" type="System">
-                            <param id="0" name="First value">Bomber.Y</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">10</param>
+                        <condition id="2" name="Key is down" sid="3135011593298132" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-2" name="Set Y" sid="8891693416182182" type="Bomber">
-                            <param id="0" name="Y">Bomber.Y -1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5057392106765136">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5776651350271289" type="System">
+                                    <param id="0" name="First value">Bomber.Y</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="787598153910957" type="Bomber">
+                                    <param id="0" name="Y">Bomber.Y + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -511,7 +552,56 @@
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-15" name="Set visible" sid="2800463247539486" type="Retry">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6249071942002257" type="Retry2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="3536157360718604" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6967375325346852" type="System">
+                            <param id="0" name="Variable">END</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7378528419328113">
+            <conditions>
+                <condition id="4" name="On key code pressed" sid="4862645567308582" type="Keyboard">
+                    <param id="0" name="Keycode">82</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Reload" sid="9848923999104464" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="2250168884511621">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="9800660871628083" type="System">
+                    <param id="0" name="First value">END</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1663234242727507">
+                    <conditions>
+                        <condition id="4" name="On key code pressed" sid="6946303478210838" type="Keyboard">
+                            <param id="0" name="Keycode">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="4075893321790093" type="Browser">
+                            <param id="0" name="URL">&quot;/index.html&quot;</param>
+                            <param id="1" name="Target">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>
