@@ -27,6 +27,13 @@
                     <param id="0" name="Variable">CarHit</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="7" name="Play (by name)" sid="9243442181580486" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">choose(&quot;Hit_Hurt1&quot;,&quot;Hit_Hurt2&quot;,&quot;Hit_Hurt3&quot;)</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3663352761950218">
@@ -45,6 +52,13 @@
                 <action id="-9" name="Set value" sid="7000424286904398" type="System">
                     <param id="0" name="Variable">CarHit</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="4238322756893088" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">choose(&quot;Hit_Hurt1&quot;,&quot;Hit_Hurt2&quot;,&quot;Hit_Hurt3&quot;)</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -65,6 +79,13 @@
                     <param id="0" name="Variable">CarHit</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="7" name="Play (by name)" sid="7673465612621095" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">choose(&quot;Hit_Hurt1&quot;,&quot;Hit_Hurt2&quot;,&quot;Hit_Hurt3&quot;)</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6650624437566182">
@@ -83,6 +104,13 @@
                 <action id="-9" name="Set value" sid="6794451738830019" type="System">
                     <param id="0" name="Variable">CarHit</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="4620020527982501" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">choose(&quot;Hit_Hurt1&quot;,&quot;Hit_Hurt2&quot;,&quot;Hit_Hurt3&quot;)</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -103,6 +131,13 @@
                     <param id="0" name="Variable">CarHit</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="7" name="Play (by name)" sid="9600869493960278" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">choose(&quot;Hit_Hurt1&quot;,&quot;Hit_Hurt2&quot;,&quot;Hit_Hurt3&quot;)</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="1890701879574673">
@@ -121,6 +156,13 @@
                 <action id="-9" name="Set value" sid="1097713799614682" type="System">
                     <param id="0" name="Variable">CarHit</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="3366161452062154" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">choose(&quot;Hit_Hurt1&quot;,&quot;Hit_Hurt2&quot;,&quot;Hit_Hurt3&quot;)</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -483,6 +525,12 @@
                         <action id="-15" name="Set visible" sid="9513690798835177" type="CarRetry">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="0" name="Play" sid="3919646077471279" type="Audio">
+                            <param id="0" name="Audio file">explode</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="9677955197205832">
@@ -503,6 +551,12 @@
                         </action>
                         <action id="-15" name="Set visible" sid="7182570782135726" type="CarRetry">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="594146337322014" type="Audio">
+                            <param id="0" name="Audio file">tooslow</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -555,6 +609,19 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="3385879279452178">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="9865099640135451" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="4116833273900144" type="Audio">
+                    <param id="0" name="Audio file">car-music</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

@@ -428,8 +428,22 @@
         </global-instance>
         <global-instance type="Browser" uid="53" />
     </global-instances>
-    <sounds-folder />
-    <music-folder />
+    <sounds-folder>
+        <file name="Hit_Hurt1.m4a" />
+        <file name="Hit_Hurt1.ogg" />
+        <file name="Hit_Hurt2.m4a" />
+        <file name="Hit_Hurt2.ogg" />
+        <file name="Hit_Hurt3.m4a" />
+        <file name="Hit_Hurt3.ogg" />
+        <file name="explode.m4a" />
+        <file name="explode.ogg" />
+        <file name="tooslow.m4a" />
+        <file name="tooslow.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="car-music.m4a" />
+        <file name="car-music.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
