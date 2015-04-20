@@ -9,10 +9,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         </active>
         <display name="HTML5" />
     </configurations>
-    <open-tabs>
-        <layout order="0">Pig</layout>
-        <event-sheet active="1" order="1">PigEventSheet</event-sheet>
-    </open-tabs>
+    <open-tabs />
     <properties>
         <property expanded="1" name="About" />
         <property expanded="1" name="Project settings" />
@@ -24,44 +21,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
-        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Pig/" />
-        <folder expanded="1" path="animation-folder/1_bg/" />
-        <folder expanded="1" path="animation-folder/1_sun/" />
-        <folder expanded="1" path="animation-folder/1_SpawnPoint/" />
         <folder expanded="1" path="animation-folder/Hand/" />
         <folder expanded="1" path="animation-folder/pigeye/" />
-        <folder expanded="1" path="animation-folder/1_LandingPoint/" />
-        <folder expanded="1" path="animation-folder/1_enemy/" />
         <folder expanded="1" path="animation-folder/pigbg/" />
         <folder expanded="1" path="animation-folder/Health/" />
         <folder expanded="1" path="animation-folder/PigAngry/" />
-        <folder expanded="1" path="animation-folder/Bomber/" />
-        <folder expanded="1" path="animation-folder/car_bg/" />
-        <folder expanded="1" path="animation-folder/Money/" />
-        <folder expanded="1" path="animation-folder/Montain/" />
-        <folder expanded="1" path="animation-folder/City/" />
-        <folder expanded="1" path="animation-folder/LeftWind/" />
         <folder expanded="1" path="animation-folder/WindSeparator/" />
-        <folder expanded="1" path="animation-folder/RightWind/" />
-        <folder expanded="1" path="animation-folder/car_part0/" />
-        <folder expanded="1" path="animation-folder/car_part1/" />
-        <folder expanded="1" path="animation-folder/car_part2/" />
-        <folder expanded="1" path="animation-folder/car_part3/" />
-        <folder expanded="1" path="animation-folder/car_part4/" />
-        <folder expanded="1" path="animation-folder/car_part5/" />
-        <folder expanded="1" path="animation-folder/car_bg2/" />
         <folder expanded="1" path="animation-folder/BackgroundBlack/" />
-        <folder expanded="1" path="animation-folder/plane/" />
-        <folder expanded="1" path="animation-folder/money_bg/" />
-        <folder expanded="1" path="animation-folder/cloud1/" />
-        <folder expanded="1" path="animation-folder/cloud2/" />
-        <folder expanded="1" path="animation-folder/money_buildings/" />
-        <folder expanded="1" path="animation-folder/money_buildings2/" />
-        <folder expanded="1" path="animation-folder/money_buildings3/" />
         <folder expanded="1" path="animation-folder/pig_bg_color/" />
         <folder expanded="1" path="animation-folder/Bar_BG/" />
     </folders-expanded>
