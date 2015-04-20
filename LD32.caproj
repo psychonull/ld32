@@ -171,6 +171,9 @@
                 <instance-variable name="currentAnimation" sid="9862005579773595" type="string" />
                 <instance-variable name="powerups" sid="5808580193639907" type="number" />
                 <instance-variable name="isGettingUp" sid="3153362674908857" type="boolean" />
+                <instance-variable name="highjuggle" sid="3669238917945388" type="boolean" />
+                <instance-variable name="highkills" sid="8377914804196281" type="boolean" />
+                <instance-variable name="maxpowerups" sid="3082064565421001" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="8752969228657615">
@@ -492,6 +495,22 @@
             </animation-folder>
         </object-type>
         <object-type name="1_static_text" sid="6512122762997949">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="1_new_kills" sid="3993950082311461">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="1_new_juggles" sid="8796748610875806">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="1_highscore_kills" sid="7954097270821117">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="1_highscore_juggles" sid="3771538810889165">
             <plugin id="Spritefont2" />
             <texture />
         </object-type>

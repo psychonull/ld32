@@ -53,6 +53,34 @@
                     <param id="1" name="Value">0</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="194556826153402">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="8991949439900013" type="WebStorage">
+                            <param id="0" name="Key">&quot;footbagHighscoreKills&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="8242870234227947" type="WebStorage">
+                            <param id="0" name="Key">&quot;footbagHighscoreKills&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5512267572521303">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="2151921578998648" type="WebStorage">
+                            <param id="0" name="Key">&quot;footbagHighscoreJuggles&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="9995863136434636" type="WebStorage">
+                            <param id="0" name="Key">&quot;footbagHighscoreJuggles&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="" sid="844129511062358" title="Player movement">
             <sub-events>
@@ -316,6 +344,21 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="6237354190156398">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1425342044563097" type="1_player">
+                                    <param id="0" name="Instance variable">powerups</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">1_player.maxpowerups</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="4413768377790588" type="1_player">
+                                    <param id="0" name="Instance variable">maxpowerups</param>
+                                    <param id="1" name="Value">1_player.powerups</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
@@ -563,15 +606,38 @@
                         <event-block sid="7411085370071613">
                             <conditions>
                                 <condition id="7" name="Compare key value (as number)" sid="5645830622651721" type="WebStorage">
-                                    <param id="0" name="Key">&quot;footbagHighscore&quot;</param>
+                                    <param id="0" name="Key">&quot;footbagHighscoreKills&quot;</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">enemiesKilled</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Set local value" sid="8267635101910757" type="WebStorage">
-                                    <param id="0" name="Key">&quot;footbagHighscore&quot;</param>
+                                    <param id="0" name="Key">&quot;footbagHighscoreKills&quot;</param>
                                     <param id="1" name="Value">enemiesKilled</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="6541973997328031" type="1_player">
+                                    <param id="0" name="Instance variable">highkills</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1916798925766058">
+                            <conditions>
+                                <condition id="7" name="Compare key value (as number)" sid="7520096067708901" type="WebStorage">
+                                    <param id="0" name="Key">&quot;footbagHighscoreJuggles&quot;</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">1_player.maxpowerups</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set local value" sid="7904837431169226" type="WebStorage">
+                                    <param id="0" name="Key">&quot;footbagHighscoreJuggles&quot;</param>
+                                    <param id="1" name="Value">1_player.maxpowerups</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="1999677153133869" type="1_player">
+                                    <param id="0" name="Instance variable">highjuggle</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -598,7 +664,20 @@
                     <conditions>
                         <condition id="-9" name="Is visible" sid="4073765137245196" type="1_play_again" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Set text" sid="1715194351416353" type="1_highscore_juggles">
+                            <param id="0" name="Text">WebStorage.LocalValue(&quot;footbagHighscoreJuggles&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5877894258578427" type="1_highscore_kills">
+                            <param id="0" name="Text">WebStorage.LocalValue(&quot;footbagHighscoreKills&quot;)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6854376195159996" type="1_highscore_juggles">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="463505687846829" type="1_highscore_kills">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="2590152171198852">
                             <conditions>
@@ -620,6 +699,30 @@
                                 <action id="7" name="Go to URL" sid="5348801645780281" type="Browser">
                                     <param id="0" name="URL">&quot;../index.html&quot;</param>
                                     <param id="1" name="Target">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4417378916186891">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="531217515609131" type="1_player">
+                                    <param id="0" name="Instance variable">highkills</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="9432885900362184" type="1_new_kills">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9207260207967639">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6323191137432689" type="1_player">
+                                    <param id="0" name="Instance variable">highjuggle</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="6108020389832788" type="1_new_juggles">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
